@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "[Tooltip] with classes produces console warnings when used around a Textfield",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25465"
+    },
+    {
+        "issueName": "CssBaseline styles for body are duplicated in the next.js example",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25458"
+    },
+    {
+        "issueName": "Date Time Picker formatting OK/PM buttons overlap",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25422"
+    },
+    {
+        "issueName": "[Autocomplete] Slow despite virtualisation",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25417"
+    },
+    {
+        "issueName": "[Select] aria-expanded not getting set to \"false\" when listbox collapsed",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25399"
+    },
+    {
+        "issueName": "disablePast is not disabling or validating time for DateTimePicker",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25397"
+    },
+    {
+        "issueName": "Page becomes unresponsive after closing a modal in iOS webkit, safari & chrome",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25371"
+    },
+    {
+        "issueName": "[Autocomplete] Update to ARIA 1.2",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25365"
+    },
+    {
+        "issueName": "[docs] Add example with switch dark/light mode",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25364"
+    },
+    {
+        "issueName": "[SpeedDial] Cannot open with Enter/Space after closed via Escape",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25326"
+    },
+    {
+        "issueName": "[Divider] Support \"middle\" variant with \"vertical\" orientation",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25321"
+    },
+    {
+        "issueName": "[Tabs] Don't animate scroll on first render",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25314"
+    },
+    {
+        "issueName": "classes provided to the Select component are directed to the input element instead of the root",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25313"
+    },
+    {
+        "issueName": "Gatsby Next example for MUI v5 not working in SSR",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25312"
+    },
+    {
+        "issueName": "Drawer does not transition closed when initialised as open",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25310"
+    },
+    {
+        "issueName": "Material-UI 4 example does not work properly with nextjs getStaticProps revalidate and causes wrong order of head tags",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25307"
+    },
+    {
+        "issueName": "[docs] Unable to install datepicker",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25290"
+    },
+    {
+        "issueName": "[GlobalStyles] styles type is probably too wide",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25208"
+    },
+    {
+        "issueName": "[Popover] Wrong positioning",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25204"
+    },
+    {
+        "issueName": "Props of Alert component cannot pass type checking when override Box component.",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25201"
+    },
+    {
+        "issueName": "Different scrollbar break design with modal",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25195"
+    },
+    {
+        "issueName": "Responsive components : Container Queries",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25189"
+    },
+    {
+        "issueName": "[Chip] When used as Popover trigger, focus not returned upon closing",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25181"
+    },
+    {
+        "issueName": "[useFocusVisible] Don't trigger when coming back from another window",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25171"
+    },
+    {
+        "issueName": "TextField with multiline does not render correctly when inside a hidden div",
+        "issueHref": "https://github.com/mui-org/material-ui/issues/25167"
+    }
+]

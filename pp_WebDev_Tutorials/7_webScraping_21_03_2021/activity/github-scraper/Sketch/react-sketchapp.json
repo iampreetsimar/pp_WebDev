@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Can't get emotion example to build",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/524"
+    },
+    {
+        "issueName": "Svg did not rendered as expected",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/523"
+    },
+    {
+        "issueName": "renderToJson broken in 3.2.5",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/519"
+    },
+    {
+        "issueName": "Support fixed position for prototypes",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/507"
+    },
+    {
+        "issueName": "Support textTransform capitalize enum",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/499"
+    },
+    {
+        "issueName": "Non-uniform border mask path overlaps borderRadius",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/492"
+    },
+    {
+        "issueName": "Render crashes Sketch with @skpm/builder  @0.7.0 - @0.7.5",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/477"
+    },
+    {
+        "issueName": "Symbol Master Layout options for resizing with overrides",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/476"
+    },
+    {
+        "issueName": "Proposal: making render() async",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/469"
+    },
+    {
+        "issueName": "LayerStyles / Appearance API",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/466"
+    },
+    {
+        "issueName": "Support for Linux",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/465"
+    },
+    {
+        "issueName": "Building 'symbols' example after changes fails when browsing Symbols page in Sketch",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/441"
+    },
+    {
+        "issueName": "[Feature-request] Add controls for 'manage overrides' in symbols",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/430"
+    },
+    {
+        "issueName": "Automate e2e tests for all examples",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/363"
+    },
+    {
+        "issueName": "Introduce Page.Container component",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/342"
+    },
+    {
+        "issueName": "Getting the existing symbols could be easier",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/328"
+    },
+    {
+        "issueName": "Investigate removing \"special\" meaning of symbols page",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/316"
+    },
+    {
+        "issueName": "Cleanup shared text style lookup",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/315"
+    },
+    {
+        "issueName": "Causes a continuous increase in memory usage",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/284"
+    },
+    {
+        "issueName": "⚛️💎🐜 Render Ant Design components to Sketch",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/283"
+    },
+    {
+        "issueName": "<Text> does not support numberOfLines or ellipsizeMode",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/270"
+    },
+    {
+        "issueName": "SVG height and width",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/269"
+    },
+    {
+        "issueName": "(docs) Add a \"slowstart\"",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/263"
+    },
+    {
+        "issueName": "React Created Artboard could not be retrieved by the mirror app.",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/250"
+    },
+    {
+        "issueName": "Extend profile-cards-primitives to run in react-native",
+        "issueHref": "https://github.com/airbnb/react-sketchapp/issues/191"
+    }
+]

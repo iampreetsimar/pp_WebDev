@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Multi-select on markdown notebook cells breaks selection",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119515"
+    },
+    {
+        "issueName": "The VSCode application quits instantly when opened (Windows 10)",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119514"
+    },
+    {
+        "issueName": "Offer to rename -- A file or folder with the name already exists in the destination folder. Do you want to replace it?",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119513"
+    },
+    {
+        "issueName": "Pasting Formatted Text into Terminal has Inconsistent Behavior",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119511"
+    },
+    {
+        "issueName": "Hide sidebar when debug panel opens",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119510"
+    },
+    {
+        "issueName": "Typing sometimes hangs until Alt+Tab",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119508"
+    },
+    {
+        "issueName": "Test: Assigning reviewers and milestone to pull request from description view",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119507"
+    },
+    {
+        "issueName": "Update shells immediately if profile config is changed",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119505"
+    },
+    {
+        "issueName": "Cancel cell execution task when cell is deleted",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119504"
+    },
+    {
+        "issueName": "Test keybindings editor",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119503"
+    },
+    {
+        "issueName": "[Getting Started] Task action for installing extensions",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119502"
+    },
+    {
+        "issueName": "Markdown links break when link label includes stylization",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119501"
+    },
+    {
+        "issueName": "Multi-select in notebooks causes text selection in markdown",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119500"
+    },
+    {
+        "issueName": "Add right-click menu option to collapse folders on current node",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119499"
+    },
+    {
+        "issueName": "Allow font-family selection in Preferences through substrings and/or regexp",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119498"
+    },
+    {
+        "issueName": "Settings Sync silently stops syncing",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119497"
+    },
+    {
+        "issueName": "Empty state for getting started",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119496"
+    },
+    {
+        "issueName": "Adopt to use new table widget for extension feature contributions editor",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119495"
+    },
+    {
+        "issueName": "March 2021 Endgame",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119494"
+    },
+    {
+        "issueName": "Window scrolls down every time I type",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119493"
+    },
+    {
+        "issueName": "Debug: current stopped line should indicate better?",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119492"
+    },
+    {
+        "issueName": "Debug: allow ctrl/cmd-click to run into a method/property",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119491"
+    },
+    {
+        "issueName": "Debug: inline breakpoints are not stable",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119490"
+    },
+    {
+        "issueName": "Debug: inline values is overwhelming",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119489"
+    },
+    {
+        "issueName": "Debug: callstack view has weird behaviour with showing line/col info",
+        "issueHref": "https://github.com/microsoft/vscode/issues/119488"
+    }
+]

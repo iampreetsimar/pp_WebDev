@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "cocos2d-js 3.17.2 安卓真机调试 js 闪退",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20653"
+    },
+    {
+        "issueName": "Bug: EventMouse getLocation return location in screen coordinates, not in OpenGL coordinates",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20652"
+    },
+    {
+        "issueName": "Black screen after unlocking Android device",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20651"
+    },
+    {
+        "issueName": "Any plans to support Linux anytime soon?",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20649"
+    },
+    {
+        "issueName": "'AudioSessionGetProperty' is unavailable: not available on macOS",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20648"
+    },
+    {
+        "issueName": "Android Soft Keyboard will cover part of the Editbox",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20647"
+    },
+    {
+        "issueName": "android obb包 解压文件crash",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20642"
+    },
+    {
+        "issueName": "[LUA ERROR] bad light userdata pointer",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20641"
+    },
+    {
+        "issueName": "How can CClabel use system fonts to replace words that do not exist in TTF files？",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20640"
+    },
+    {
+        "issueName": "Render Texture is not rendering 3d sprites which are placed on z axis farther than -600",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20639"
+    },
+    {
+        "issueName": "crash on touch on app launch",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20638"
+    },
+    {
+        "issueName": "UIWebViewImpl-ios onJsCallback jsScheme not a request url",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20637"
+    },
+    {
+        "issueName": "Can not play  .wav  file  on  Win32",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20636"
+    },
+    {
+        "issueName": "Access to Android Java files, the different citation methods of 3.16 and 3.17.2",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20635"
+    },
+    {
+        "issueName": "image status is TGA_ERROR_COMPRESSED_FILE when loading TGA image?",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20633"
+    },
+    {
+        "issueName": "[_MTLCommandBuffer addScheduledHandler:], line 385: error 'Scheduler handler provided after commit call'",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20632"
+    },
+    {
+        "issueName": "v4版本的 TextureGL 中的 getBytes 是不是实现的有问题？",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20631"
+    },
+    {
+        "issueName": "opengl backend 的 computeAttributeInfos 没有实现？",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20630"
+    },
+    {
+        "issueName": "How to compile project proj.android created by new cocos2d-x v 4.0 in new Android Studio 4.1.1?",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20629"
+    },
+    {
+        "issueName": "RenderPipelineDescriptor is not used, so what is the purpose of it?",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20628"
+    },
+    {
+        "issueName": "ios下切换游戏场景或退出重进会crash",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20627"
+    },
+    {
+        "issueName": "安卓的某些机型上容易出现某些文字无法显示出来，而且每次启动游戏无法显示的文字都不一样",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20626"
+    },
+    {
+        "issueName": "drawSolidPoly绘制一条粗斜线锯齿严重",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20625"
+    },
+    {
+        "issueName": "Layer尺寸比较大导致绘制内容出现变形",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20624"
+    },
+    {
+        "issueName": "Some ui::Text components which use UTF-8 strings aren't being rendered. FIXED with both #20000 and #20476 (Issue related to cocos2d::ui::Label::update(), cocos2d::ui::Label::BatchCommand and cocos2d::CustomCommand).",
+        "issueHref": "https://github.com/cocos2d/cocos2d-x/issues/20622"
+    }
+]

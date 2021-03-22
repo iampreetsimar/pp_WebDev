@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Cannot inline as <MappedType> object",
+        "issueHref": "https://github.com/prettier/prettier/issues/10571"
+    },
+    {
+        "issueName": "getSupportInfo() does not return file extensions for custom registered languages",
+        "issueHref": "https://github.com/prettier/prettier/issues/10561"
+    },
+    {
+        "issueName": "Release 2.3 checklist",
+        "issueHref": "https://github.com/prettier/prettier/issues/10537"
+    },
+    {
+        "issueName": "YAML: a comment after an anchor doesn't stay on a separate line",
+        "issueHref": "https://github.com/prettier/prettier/issues/10518"
+    },
+    {
+        "issueName": "parse error on mdx code block in markdown",
+        "issueHref": "https://github.com/prettier/prettier/issues/10507"
+    },
+    {
+        "issueName": "[CSS] Bad formatting of a long list of arguments",
+        "issueHref": "https://github.com/prettier/prettier/issues/10486"
+    },
+    {
+        "issueName": "Glimmer: Double quotes removed even if single quotes inside",
+        "issueHref": "https://github.com/prettier/prettier/issues/10419"
+    },
+    {
+        "issueName": "Missing parens in yield pipeline expression",
+        "issueHref": "https://github.com/prettier/prettier/issues/10413"
+    },
+    {
+        "issueName": "Babel turn invalid code to valid code",
+        "issueHref": "https://github.com/prettier/prettier/issues/10412"
+    },
+    {
+        "issueName": "Broken ThrowExpression case",
+        "issueHref": "https://github.com/prettier/prettier/issues/10411"
+    },
+    {
+        "issueName": "Proposal: Add __babel-estree parser",
+        "issueHref": "https://github.com/prettier/prettier/issues/10406"
+    },
+    {
+        "issueName": "[Feature Request] add warning about file ignored and cli flag to enforce formatting",
+        "issueHref": "https://github.com/prettier/prettier/issues/10395"
+    },
+    {
+        "issueName": "Prefer breaking after = in type aliases if RHS is a conditional type chain",
+        "issueHref": "https://github.com/prettier/prettier/issues/10325"
+    },
+    {
+        "issueName": "Update the docs on the website to reflect the Husky 5.0 for pre-commit hooks",
+        "issueHref": "https://github.com/prettier/prettier/issues/10311"
+    },
+    {
+        "issueName": "scss mixin breaks on format if name is \"selector\"",
+        "issueHref": "https://github.com/prettier/prettier/issues/10291"
+    },
+    {
+        "issueName": "[typescript] doc comments on function type signatures get moved to invalid places",
+        "issueHref": "https://github.com/prettier/prettier/issues/10260"
+    },
+    {
+        "issueName": "why the if comment is line breaked?",
+        "issueHref": "https://github.com/prettier/prettier/issues/10250"
+    },
+    {
+        "issueName": "Refactor: Print ChainExpression directly",
+        "issueHref": "https://github.com/prettier/prettier/issues/10244"
+    },
+    {
+        "issueName": "Glimmer parser destructively re-orders component args and comments",
+        "issueHref": "https://github.com/prettier/prettier/issues/10203"
+    },
+    {
+        "issueName": "Freeze builtin docs",
+        "issueHref": "https://github.com/prettier/prettier/issues/10182"
+    },
+    {
+        "issueName": "Handlebars: Print one element per line (like HTML printer)",
+        "issueHref": "https://github.com/prettier/prettier/issues/10178"
+    },
+    {
+        "issueName": "The CSS indentationl level is miscalculated in calc()-like functions",
+        "issueHref": "https://github.com/prettier/prettier/issues/10166"
+    },
+    {
+        "issueName": "Wrap and indent long class names with glimmer parser",
+        "issueHref": "https://github.com/prettier/prettier/issues/10163"
+    },
+    {
+        "issueName": "Investigate/debug how ifBreak with group id works inside group with that id",
+        "issueHref": "https://github.com/prettier/prettier/issues/10159"
+    },
+    {
+        "issueName": "Drop support for Node.js 10, switch to ES Module",
+        "issueHref": "https://github.com/prettier/prettier/issues/10157"
+    }
+]

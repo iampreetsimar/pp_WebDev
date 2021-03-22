@@ -1,0 +1,54 @@
+[
+    {
+        "issueName": "Push failed",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/238"
+    },
+    {
+        "issueName": "Configure gitignore and gitattributes file?",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/232"
+    },
+    {
+        "issueName": "Unable to create diff files – Error: EISDIR",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/231"
+    },
+    {
+        "issueName": "Git commit doesn't work",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/229"
+    },
+    {
+        "issueName": "Error trying to export PNGs",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/228"
+    },
+    {
+        "issueName": "Feature Request:  Git Status",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/171"
+    },
+    {
+        "issueName": "Only generate pretty diffs for new/updated symbols",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/149"
+    },
+    {
+        "issueName": "Provide documentation to run from command line",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/142"
+    },
+    {
+        "issueName": "Feature Request: Minor optimization to Commit Dialog window.",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/137"
+    },
+    {
+        "issueName": "Add ability to push with commit",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/96"
+    },
+    {
+        "issueName": "Commits all changes, not just Sketch changes",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/78"
+    },
+    {
+        "issueName": "Artboards with the same name across different pages don't get tracked",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/67"
+    },
+    {
+        "issueName": "update file when switching branch",
+        "issueHref": "https://github.com/mathieudutour/git-sketch-plugin/issues/2"
+    }
+]

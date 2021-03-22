@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "--explainFiles differentiate import type ... vs import",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43338"
+    },
+    {
+        "issueName": "Regression from 4.1.5 to 4.2.3: \"Type instantiation is excessively deep and possibly infinite.\"",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43337"
+    },
+    {
+        "issueName": "Intl.NumberFormatOptions type restriction",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43336"
+    },
+    {
+        "issueName": "Lazily evaluated template literal types",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43335"
+    },
+    {
+        "issueName": "Type overload branches not properly detected",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43334"
+    },
+    {
+        "issueName": "Type narrowing does not survive after applying suggested 'extract to constant' refactoring",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43333"
+    },
+    {
+        "issueName": "TypeScript doesn't understand fromEntries",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43332"
+    },
+    {
+        "issueName": "Inferred return type is incomplete",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43331"
+    },
+    {
+        "issueName": "Add flag to not transpile dynamic import() when module is CommonJS",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43329"
+    },
+    {
+        "issueName": "Using imported modules in the VSCode debug console",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43328"
+    },
+    {
+        "issueName": "eval?.() is now an indirect eval",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43327"
+    },
+    {
+        "issueName": "Support import maps and bare import specifiers",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43326"
+    },
+    {
+        "issueName": "Allow for safely accessing properties that arguments to a type guard function could potentially have",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43324"
+    },
+    {
+        "issueName": "Deduced type array indexed value does not include undefined",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43321"
+    },
+    {
+        "issueName": "Method defined with defineProperty is not callable",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43319"
+    },
+    {
+        "issueName": "Slow Typescript Intellisense in big project",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43318"
+    },
+    {
+        "issueName": "Remove braces refactoring produces broken code if returning an object literal with type casting",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43313"
+    },
+    {
+        "issueName": "TS should not suggest converting to async function if void is explicitly returned",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43316"
+    },
+    {
+        "issueName": "JS Intellisense not detecting ES6 Symbol properties assigned after Initialization",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43317"
+    },
+    {
+        "issueName": "jsxImportSource is too eagerly parsed",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43310"
+    },
+    {
+        "issueName": "TypeScript doesn't consider different overloads, only picks the last.",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43301"
+    },
+    {
+        "issueName": "Declare property quick fix overrides extension libs",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43299"
+    },
+    {
+        "issueName": "Function refactor removes comment",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43298"
+    },
+    {
+        "issueName": "jsdoc @template not recognized as generic",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43297"
+    },
+    {
+        "issueName": "Emitter helper function could be override by user code",
+        "issueHref": "https://github.com/microsoft/TypeScript/issues/43296"
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "How to choose black and white from Hue?",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/810"
+    },
+    {
+        "issueName": "BUG: SketchPicker Component in SSR project display warning props don't match",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/808"
+    },
+    {
+        "issueName": "Uncaught TypeError: Cannot read property 'isValidHex' of undefined",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/807"
+    },
+    {
+        "issueName": "getContainerRenderWindow in Saturation component inside iframe is causing a crash",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/806"
+    },
+    {
+        "issueName": "Uncaught TypeError: Cannot read property 'canvas' of undefined",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/804"
+    },
+    {
+        "issueName": "Bug: mouseup event doesn't always fire",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/803"
+    },
+    {
+        "issueName": "Changelog for 2.19.x?",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/800"
+    },
+    {
+        "issueName": "Bug: can't choose color from selector if my initial color #00000 or #ffffff",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/799"
+    },
+    {
+        "issueName": "Bug: A security error occurred and caused a crash when used in a different source iframe",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/798"
+    },
+    {
+        "issueName": "How to hide input field and '#' from TwitterPicker",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/797"
+    },
+    {
+        "issueName": "Behavior beyond expectations  when the mouse moves out from below",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/796"
+    },
+    {
+        "issueName": "ChromePicker broken on 2.19.3 version in Internet Explorer 11",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/795"
+    },
+    {
+        "issueName": "ColorWrapped saturation block pointer jumps erratically in newer versions of React (16.3+)",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/794"
+    },
+    {
+        "issueName": "How to use by browser script tag ， not by npm？",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/792"
+    },
+    {
+        "issueName": "Color picker point sticks to bottom left and bottom right corners while mouse dragging at bottom line",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/790"
+    },
+    {
+        "issueName": "Range input in a scaled element",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/788"
+    },
+    {
+        "issueName": "Bug: Favicon is not appearing on Documentation Site.",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/786"
+    },
+    {
+        "issueName": "Color Picker bug",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/785"
+    },
+    {
+        "issueName": "eyedropper tool to pick colors from screen",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/778"
+    },
+    {
+        "issueName": "eyedropper tool",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/777"
+    },
+    {
+        "issueName": "Why can't I select colors on Windows?",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/775"
+    },
+    {
+        "issueName": "NextJS SSR, client not matching server",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/774"
+    },
+    {
+        "issueName": "react-color usage with contentEditable",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/768"
+    },
+    {
+        "issueName": "How to remove the Alpha channel.",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/767"
+    },
+    {
+        "issueName": "Chrome picker inputs changes after re-rendering. There's no default input prop possible.",
+        "issueHref": "https://github.com/casesandberg/react-color/issues/765"
+    }
+]

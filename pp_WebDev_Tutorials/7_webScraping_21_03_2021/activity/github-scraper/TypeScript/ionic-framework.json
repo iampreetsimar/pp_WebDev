@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "bug: ion-slider a11y - iOS Screen Reader not reading current Slide-Content, instead previous",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23075"
+    },
+    {
+        "issueName": "bug: Ion toolbar does not center align middle content with start and end slot content",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23072"
+    },
+    {
+        "issueName": "bug: <ion-toast> is not a known element (angular)",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23068"
+    },
+    {
+        "issueName": "bug: ionSlides multiple instances",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23064"
+    },
+    {
+        "issueName": "bug: ion-segment a11y - role should be tablist, buttons should use aria-selected",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23059"
+    },
+    {
+        "issueName": "bug: vue, leaving and going back to a different tab causes new tab to not be shown",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23058"
+    },
+    {
+        "issueName": "bug: Focus is not getting trapped in overlay components when screen reader is active",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23053"
+    },
+    {
+        "issueName": "bug: \"ion-spinner\" displays a strange icon",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23045"
+    },
+    {
+        "issueName": "bug: iOS NavController animates too much slide",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23042"
+    },
+    {
+        "issueName": "bug: Toggle firing click event twice",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23041"
+    },
+    {
+        "issueName": "bug: adding buttons to alert with the same role causes the first handler to always be fired",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23037"
+    },
+    {
+        "issueName": "bug: onclick event don't work with ionic started on existing react project",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23033"
+    },
+    {
+        "issueName": "feat: on ion-router change events, attach information about route that will/did change",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23026"
+    },
+    {
+        "issueName": "bug: disabling and sorting not working well with nested ion-reorder-group",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23022"
+    },
+    {
+        "issueName": "bug: [angular] cursor doesn't move in <ion-input> in responsive form after setValue() for form control and setting selectionStart/End for input",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23016"
+    },
+    {
+        "issueName": "bug: card style modal should be rounder when on notch iphones",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23015"
+    },
+    {
+        "issueName": "bug: [react] router outlet destroys route if it is not a direct child",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23013"
+    },
+    {
+        "issueName": "bug: ios, delegatesFocus always focuses first focusable element",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23002"
+    },
+    {
+        "issueName": "bug: ios, scroll latching incorrect on pwas",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/23001"
+    },
+    {
+        "issueName": "feat: capture groups and back references in ion-route-redirect",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22996"
+    },
+    {
+        "issueName": "bug: Input overlaps Label in MD mode causing a11y WCAG warning",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22979"
+    },
+    {
+        "issueName": "bug: placeholder types not compliant in ionic / react",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22976"
+    },
+    {
+        "issueName": "bug: slides issues with async initialization",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22961"
+    },
+    {
+        "issueName": "feat: AcionSheet/ActionAlert custom properties",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22959"
+    },
+    {
+        "issueName": "bug: ion-datetime wrong height/padding",
+        "issueHref": "https://github.com/ionic-team/ionic-framework/issues/22954"
+    }
+]

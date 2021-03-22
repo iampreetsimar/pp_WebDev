@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Typescript: Propagate Meta Generic Args type to interface properties",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14301"
+    },
+    {
+        "issueName": "Unexpected 'Compiling RuleSet failed: Properties query are unknown' error with Vue 2 in a Laravel project",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14300"
+    },
+    {
+        "issueName": "ES6 optional chaining syntax in svelte component throws an error",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14292"
+    },
+    {
+        "issueName": "storybook not working on microsoft edge.",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14289"
+    },
+    {
+        "issueName": "Support use of updated web-component.json file",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14286"
+    },
+    {
+        "issueName": "Missing types for async loaders in React",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14282"
+    },
+    {
+        "issueName": "Allow enabling compression in development",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14280"
+    },
+    {
+        "issueName": "default component args missing from importing named export stories in unit tests",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14278"
+    },
+    {
+        "issueName": "Typescript module resolution with js extension",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14274"
+    },
+    {
+        "issueName": "Storybook not working with Gatsby v3",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14273"
+    },
+    {
+        "issueName": "Angular docs \"Show code\" chooses generated template over user-defined template",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14268"
+    },
+    {
+        "issueName": "Controls: Add table type for arrays",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14266"
+    },
+    {
+        "issueName": "Storybook not showing Radio Button Group for a typescript property",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14263"
+    },
+    {
+        "issueName": "Failed to load the Angular CLI config (Angular 11.2.5)",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14260"
+    },
+    {
+        "issueName": "Storybook controls dont react to v-model changes",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14259"
+    },
+    {
+        "issueName": "Storybook with builder-webpac5  complains about conflicting values in DefinePlugin and not redefine custom variables",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14257"
+    },
+    {
+        "issueName": "sb extract alternative to puppeteer",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14254"
+    },
+    {
+        "issueName": "[chore, webpack5] Replace hash with [fullhash]",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14253"
+    },
+    {
+        "issueName": "Default props with handsontable causes infinite loading",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14247"
+    },
+    {
+        "issueName": "Improve addons-docs blocks documentation",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14244"
+    },
+    {
+        "issueName": "addon-toolbars: add support for keyboard shortcuts/navigation",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14239"
+    },
+    {
+        "issueName": "Switch @storybook/addon-docs to XDM",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14238"
+    },
+    {
+        "issueName": "[6.2.0-beta.11] MDX Merges Heading Levels 1 and 2",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14231"
+    },
+    {
+        "issueName": "Vue3 + TSX",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14229"
+    },
+    {
+        "issueName": "Object control does not work with value property containing string with commas",
+        "issueHref": "https://github.com/storybookjs/storybook/issues/14225"
+    }
+]

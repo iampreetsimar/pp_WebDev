@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Stop suggestions for Tailwind CSS classes",
+        "issueHref": "https://github.com/codota/TabNine/issues/356"
+    },
+    {
+        "issueName": "Establishing connection to TabNine Cloud...",
+        "issueHref": "https://github.com/codota/TabNine/issues/355"
+    },
+    {
+        "issueName": "Feature Request: Usage Statistics",
+        "issueHref": "https://github.com/codota/TabNine/issues/350"
+    },
+    {
+        "issueName": "Don't open Tabnine welcome when extension is installed via settings sync",
+        "issueHref": "https://github.com/codota/TabNine/issues/344"
+    },
+    {
+        "issueName": "musl and domain names resolution",
+        "issueHref": "https://github.com/codota/TabNine/issues/343"
+    },
+    {
+        "issueName": "Suggestion: Use the model for code formatting",
+        "issueHref": "https://github.com/codota/TabNine/issues/337"
+    },
+    {
+        "issueName": "[feature] Individual models depending on language",
+        "issueHref": "https://github.com/codota/TabNine/issues/335"
+    },
+    {
+        "issueName": "[feature] Reduce distracting flashing - add preference allowing delay",
+        "issueHref": "https://github.com/codota/TabNine/issues/334"
+    },
+    {
+        "issueName": "A weak suggestion relating to import/export modules in PyCharm",
+        "issueHref": "https://github.com/codota/TabNine/issues/333"
+    },
+    {
+        "issueName": "IDE autocomplete not works when the free daily completions reaches the limit",
+        "issueHref": "https://github.com/codota/TabNine/issues/332"
+    },
+    {
+        "issueName": "Tabnine von Windows 10 in Virtualbox: \"Initializing...\"",
+        "issueHref": "https://github.com/codota/TabNine/issues/328"
+    },
+    {
+        "issueName": "Stopped working in Sublime Text",
+        "issueHref": "https://github.com/codota/TabNine/issues/325"
+    },
+    {
+        "issueName": "TabNine is crashing my system with huge 100%+ CPU usage",
+        "issueHref": "https://github.com/codota/TabNine/issues/320"
+    },
+    {
+        "issueName": "Tabnine hides other suggestions",
+        "issueHref": "https://github.com/codota/TabNine/issues/318"
+    },
+    {
+        "issueName": "High cpu usage while hitting <BS> quickly",
+        "issueHref": "https://github.com/codota/TabNine/issues/316"
+    },
+    {
+        "issueName": "Lua in IntelliJ gives fairly ludicrous suggestions.",
+        "issueHref": "https://github.com/codota/TabNine/issues/315"
+    },
+    {
+        "issueName": "Tabnine settings page stuck at \"Initializing...\" on work machine, autocomplete not working",
+        "issueHref": "https://github.com/codota/TabNine/issues/313"
+    },
+    {
+        "issueName": "VSCode - Cpu not supported",
+        "issueHref": "https://github.com/codota/TabNine/issues/312"
+    },
+    {
+        "issueName": "I can't find the install error details in the debug.log file",
+        "issueHref": "https://github.com/codota/TabNine/issues/309"
+    },
+    {
+        "issueName": "TabNine::config page always be blank on vscode-remote",
+        "issueHref": "https://github.com/codota/TabNine/issues/305"
+    },
+    {
+        "issueName": "TabNine doesn't work with haxe language server",
+        "issueHref": "https://github.com/codota/TabNine/issues/301"
+    },
+    {
+        "issueName": "[Feature] Customizable Model Path",
+        "issueHref": "https://github.com/codota/TabNine/issues/299"
+    },
+    {
+        "issueName": "Use .p4ignore to reduce file indexing",
+        "issueHref": "https://github.com/codota/TabNine/issues/296"
+    },
+    {
+        "issueName": "[Suggestion] Add \"index\" number in list of suggestions",
+        "issueHref": "https://github.com/codota/TabNine/issues/295"
+    },
+    {
+        "issueName": "[Suggestion] Support for Apache Netbeans",
+        "issueHref": "https://github.com/codota/TabNine/issues/294"
+    }
+]

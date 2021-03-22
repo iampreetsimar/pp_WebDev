@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "hs CLI can't load dynamic library.",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2784"
+    },
+    {
+        "issueName": "Thoughts on a new approach to spaces...",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2776"
+    },
+    {
+        "issueName": "Disable asan/zombies/malloc guards in Release build",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2775"
+    },
+    {
+        "issueName": "Root causing our \"weird\" crash logs",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2759"
+    },
+    {
+        "issueName": "hs.midi is quitting browser apps.",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2755"
+    },
+    {
+        "issueName": "Window layout not working as expected.",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2744"
+    },
+    {
+        "issueName": "menubar top overflow",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2741"
+    },
+    {
+        "issueName": "Auto collect hs.canvas objects?",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2730"
+    },
+    {
+        "issueName": "hs.window.switcher memory leak(s)",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2729"
+    },
+    {
+        "issueName": "Automate releases with GitHub Actions",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2711"
+    },
+    {
+        "issueName": "hs.canvas.new creates an HSCanvasWindow unconditionally",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2709"
+    },
+    {
+        "issueName": "Weird behavior sending arrow keys Updated: Key event strangeness with Barrier",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2708"
+    },
+    {
+        "issueName": "Can't launchOrFocus SEGGER Embedded Studio",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2707"
+    },
+    {
+        "issueName": "application.open(app:name()) does not always work",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2706"
+    },
+    {
+        "issueName": "Window tiling?",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2704"
+    },
+    {
+        "issueName": "feat(hs.ipc.cli): Trap Control-c in hs repl and use Control-D to exit",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2688"
+    },
+    {
+        "issueName": "Replace hs.window.filter",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2683"
+    },
+    {
+        "issueName": "New windows are often not picked up by window filters",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2682"
+    },
+    {
+        "issueName": "event.newKeyEvent breaking all active event taps running on the system in macOS Big Sur",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2680"
+    },
+    {
+        "issueName": "hs.application & hs.application.watcher don't register when keyboard focus changes to Spolight's input window",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2679"
+    },
+    {
+        "issueName": "Unable to move window to another space",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2672"
+    },
+    {
+        "issueName": "hs.itunes.next and hs.itunes.previous skip to next album instead of next song",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2669"
+    },
+    {
+        "issueName": "hs.speededitor - Add support for DaVinci Resolve Speed Editor keyboard",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2667"
+    },
+    {
+        "issueName": "attempt to call a nil value (method 'isHidden')",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2665"
+    },
+    {
+        "issueName": "[Bug?] Focus one WebView out of multiple WebView's",
+        "issueHref": "https://github.com/Hammerspoon/hammerspoon/issues/2662"
+    }
+]

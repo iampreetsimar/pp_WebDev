@@ -1,0 +1,66 @@
+[
+    {
+        "issueName": "移动的ip不准",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/178"
+    },
+    {
+        "issueName": "您好，这个不能进行ipv6的地理位置查询吗",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/177"
+    },
+    {
+        "issueName": "建议提供ISO标准code",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/172"
+    },
+    {
+        "issueName": "每个binding下面没有README说明呢",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/164"
+    },
+    {
+        "issueName": "使用自己的ip.merge.txt生成db文件，ip.merge.txt中IP分段可以重复吗",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/156"
+    },
+    {
+        "issueName": ".netcore BtreeSearch 返回地区乱码",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/129"
+    },
+    {
+        "issueName": "IP库整合规则",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/126"
+    },
+    {
+        "issueName": "关于Java使用时的线程安全问题",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/118"
+    },
+    {
+        "issueName": "腾讯云的IP似乎解析不出来",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/114"
+    },
+    {
+        "issueName": "请问城市ID的生成规则市什么样子的呢",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/112"
+    },
+    {
+        "issueName": "什么时候支持查询结果有经纬度老哥？",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/99"
+    },
+    {
+        "issueName": "建议golang包中增加异常捕捉代码",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/97"
+    },
+    {
+        "issueName": "reserved identifier violation",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/93"
+    },
+    {
+        "issueName": "lua error",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/84"
+    },
+    {
+        "issueName": "提个需求",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/60"
+    },
+    {
+        "issueName": "关于C#  nuget包引用问题",
+        "issueHref": "https://github.com/lionsoul2014/ip2region/issues/59"
+    }
+]

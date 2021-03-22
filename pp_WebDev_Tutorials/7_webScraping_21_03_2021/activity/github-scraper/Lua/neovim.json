@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Argument OLD_PO_FILE_INPUT for msgfmt",
+        "issueHref": "https://github.com/neovim/neovim/issues/14187"
+    },
+    {
+        "issueName": "Printing package.(c)path on nightly build yields the path at build time",
+        "issueHref": "https://github.com/neovim/neovim/issues/14183"
+    },
+    {
+        "issueName": "Add optional default argument to nvim_get_var (and variants)",
+        "issueHref": "https://github.com/neovim/neovim/issues/14182"
+    },
+    {
+        "issueName": "Neovim not recognizing command key on macOS",
+        "issueHref": "https://github.com/neovim/neovim/issues/14181"
+    },
+    {
+        "issueName": "Syntax highlighting bug for 's and \"s",
+        "issueHref": "https://github.com/neovim/neovim/issues/14177"
+    },
+    {
+        "issueName": "Cursor shape gets stuck as underscore entering insert mode in nomodifiable buffer",
+        "issueHref": "https://github.com/neovim/neovim/issues/14176"
+    },
+    {
+        "issueName": "winrow is reported as a 'column' in :help getwininfo()",
+        "issueHref": "https://github.com/neovim/neovim/issues/14174"
+    },
+    {
+        "issueName": "Example windo command does not work",
+        "issueHref": "https://github.com/neovim/neovim/issues/14173"
+    },
+    {
+        "issueName": "TSX treesitter segfault",
+        "issueHref": "https://github.com/neovim/neovim/issues/14170"
+    },
+    {
+        "issueName": "Visual-Block insert does not insert all characters",
+        "issueHref": "https://github.com/neovim/neovim/issues/14168"
+    },
+    {
+        "issueName": "lsp: jump_to_location fails to switch to specified window",
+        "issueHref": "https://github.com/neovim/neovim/issues/14163"
+    },
+    {
+        "issueName": "LSP client detaches when an external shell command is ran on a buffer, causing any existing diagnostics to get stuck",
+        "issueHref": "https://github.com/neovim/neovim/issues/14162"
+    },
+    {
+        "issueName": "lsp: outdated diagnostics show up, slowly,  after they have been fixed",
+        "issueHref": "https://github.com/neovim/neovim/issues/14161"
+    },
+    {
+        "issueName": "operatorfunc with lua-function",
+        "issueHref": "https://github.com/neovim/neovim/issues/14157"
+    },
+    {
+        "issueName": "relativenumber and cursorline slows down vim on zsh files",
+        "issueHref": "https://github.com/neovim/neovim/issues/14154"
+    },
+    {
+        "issueName": "SIGSEGV in neovim, possibly caused by treesitter.",
+        "issueHref": "https://github.com/neovim/neovim/issues/14153"
+    },
+    {
+        "issueName": "termux build: missing libtreesitter references",
+        "issueHref": "https://github.com/neovim/neovim/issues/14151"
+    },
+    {
+        "issueName": "Neovim becomes unresponsive with 100% CPU when pressing G on a large HTML file",
+        "issueHref": "https://github.com/neovim/neovim/issues/14150"
+    },
+    {
+        "issueName": "Usabiity of working with multiple files",
+        "issueHref": "https://github.com/neovim/neovim/issues/14147"
+    },
+    {
+        "issueName": "unfinished string near 'eof' error",
+        "issueHref": "https://github.com/neovim/neovim/issues/14146"
+    },
+    {
+        "issueName": "lsp: better highlighting of hover docs",
+        "issueHref": "https://github.com/neovim/neovim/issues/14143"
+    },
+    {
+        "issueName": "Locally set iskeyword should be decoupled from command line mode",
+        "issueHref": "https://github.com/neovim/neovim/issues/14141"
+    },
+    {
+        "issueName": "LSP popup does not go away after navigating to definition in another file",
+        "issueHref": "https://github.com/neovim/neovim/issues/14135"
+    },
+    {
+        "issueName": "map-<expr> doesn't replay properly in mappings and macros",
+        "issueHref": "https://github.com/neovim/neovim/issues/14133"
+    },
+    {
+        "issueName": "terminal can't output content totally even [Process exited 0] come up",
+        "issueHref": "https://github.com/neovim/neovim/issues/14118"
+    }
+]

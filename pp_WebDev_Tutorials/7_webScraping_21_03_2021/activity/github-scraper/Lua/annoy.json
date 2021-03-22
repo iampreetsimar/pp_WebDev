@@ -1,0 +1,102 @@
+[
+    {
+        "issueName": "Indexing the feature vector list of unequal shapes #1705",
+        "issueHref": "https://github.com/spotify/annoy/issues/534"
+    },
+    {
+        "issueName": "test_binary_compatibility & test_prefault segfault on ppc64 & s390x",
+        "issueHref": "https://github.com/spotify/annoy/issues/533"
+    },
+    {
+        "issueName": "ValueError showing incorrect message",
+        "issueHref": "https://github.com/spotify/annoy/issues/531"
+    },
+    {
+        "issueName": "What is the 'angular' distance metric?",
+        "issueHref": "https://github.com/spotify/annoy/issues/530"
+    },
+    {
+        "issueName": "Python equivalent of Angular distance.",
+        "issueHref": "https://github.com/spotify/annoy/issues/528"
+    },
+    {
+        "issueName": "what data  is stored in leaf node and split node ?",
+        "issueHref": "https://github.com/spotify/annoy/issues/527"
+    },
+    {
+        "issueName": "Pip installation failed on macOS Big Sur due to clang error",
+        "issueHref": "https://github.com/spotify/annoy/issues/523"
+    },
+    {
+        "issueName": "Can someone help me?",
+        "issueHref": "https://github.com/spotify/annoy/issues/521"
+    },
+    {
+        "issueName": "Out of memory error even for 100 vectors",
+        "issueHref": "https://github.com/spotify/annoy/issues/518"
+    },
+    {
+        "issueName": "\"Illegal instruction: 4\" when trying to build index (Python 3.7, Annoy version 1.17.0, macOS 10.14.6)",
+        "issueHref": "https://github.com/spotify/annoy/issues/513"
+    },
+    {
+        "issueName": "Segmentation fault with 1.17.0 release",
+        "issueHref": "https://github.com/spotify/annoy/issues/506"
+    },
+    {
+        "issueName": "add_item on tensorflow tensor is extremely slow",
+        "issueHref": "https://github.com/spotify/annoy/issues/498"
+    },
+    {
+        "issueName": "Error: illegal hardware instruction (core dumped)",
+        "issueHref": "https://github.com/spotify/annoy/issues/492"
+    },
+    {
+        "issueName": "Stack overflow for large datasets",
+        "issueHref": "https://github.com/spotify/annoy/issues/490"
+    },
+    {
+        "issueName": "Windows 10 cannot build annoy",
+        "issueHref": "https://github.com/spotify/annoy/issues/477"
+    },
+    {
+        "issueName": "get_nns_by_vector possibility",
+        "issueHref": "https://github.com/spotify/annoy/issues/473"
+    },
+    {
+        "issueName": "Initializing an AnnoyIndex crashes on AMD processors",
+        "issueHref": "https://github.com/spotify/annoy/issues/472"
+    },
+    {
+        "issueName": "annoy parameters consideration for getting the best search match",
+        "issueHref": "https://github.com/spotify/annoy/issues/470"
+    },
+    {
+        "issueName": "Document expected behaviour if set_seed not called",
+        "issueHref": "https://github.com/spotify/annoy/issues/467"
+    },
+    {
+        "issueName": "Getting wrong number of trees after saving",
+        "issueHref": "https://github.com/spotify/annoy/issues/463"
+    },
+    {
+        "issueName": "UBSAN issue with Hamming due misalignment",
+        "issueHref": "https://github.com/spotify/annoy/issues/456"
+    },
+    {
+        "issueName": "Does Annoy suit my use-case?",
+        "issueHref": "https://github.com/spotify/annoy/issues/447"
+    },
+    {
+        "issueName": "Failing to install from source",
+        "issueHref": "https://github.com/spotify/annoy/issues/439"
+    },
+    {
+        "issueName": "Crashes when uses within AWS Lambda Python 3.6",
+        "issueHref": "https://github.com/spotify/annoy/issues/414"
+    },
+    {
+        "issueName": "GPU Accelerate Annoy Index Building / Queries",
+        "issueHref": "https://github.com/spotify/annoy/issues/407"
+    }
+]

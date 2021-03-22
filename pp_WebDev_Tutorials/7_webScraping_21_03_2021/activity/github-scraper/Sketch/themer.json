@@ -1,0 +1,50 @@
+[
+    {
+        "issueName": "Hack for gray conversion should no longer be necessary",
+        "issueHref": "https://github.com/mjswensen/themer/issues/89"
+    },
+    {
+        "issueName": "ls support - dircolors paradox",
+        "issueHref": "https://github.com/mjswensen/themer/issues/88"
+    },
+    {
+        "issueName": "Support for Vivaldi",
+        "issueHref": "https://github.com/mjswensen/themer/issues/81"
+    },
+    {
+        "issueName": "Theme support for Notepad++",
+        "issueHref": "https://github.com/mjswensen/themer/issues/63"
+    },
+    {
+        "issueName": "side by side themeing",
+        "issueHref": "https://github.com/mjswensen/themer/issues/53"
+    },
+    {
+        "issueName": "Please add support for tilix",
+        "issueHref": "https://github.com/mjswensen/themer/issues/52"
+    },
+    {
+        "issueName": "Telegram (Desktop, Android, Telegram X Android) theme",
+        "issueHref": "https://github.com/mjswensen/themer/issues/49"
+    },
+    {
+        "issueName": "Guake Terminal",
+        "issueHref": "https://github.com/mjswensen/themer/issues/30"
+    },
+    {
+        "issueName": "Request: Textual Template",
+        "issueHref": "https://github.com/mjswensen/themer/issues/24"
+    },
+    {
+        "issueName": "From Sublime to Themer",
+        "issueHref": "https://github.com/mjswensen/themer/issues/20"
+    },
+    {
+        "issueName": "Brackets",
+        "issueHref": "https://github.com/mjswensen/themer/issues/14"
+    },
+    {
+        "issueName": "GTK3 theme?",
+        "issueHref": "https://github.com/mjswensen/themer/issues/9"
+    }
+]
