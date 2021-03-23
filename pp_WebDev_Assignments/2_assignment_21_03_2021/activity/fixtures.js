@@ -17,7 +17,7 @@ function getFixtureDetailRequest(url) {
 function extractFixtureDetails(body) {
     let selTool = cheerio.load(body);
     let scorecardDivs = selTool(".match-cta-container a[data-hover = \"Scorecard\"]");
-    for(let i = 0; i < 1; i++) {
+    for(let i = 0; i < 2; i++) {
         let matchHref = selTool(scorecardDivs[i]).attr("href");
         getMatchDetailsRequest(espnUrl + matchHref);
     }
