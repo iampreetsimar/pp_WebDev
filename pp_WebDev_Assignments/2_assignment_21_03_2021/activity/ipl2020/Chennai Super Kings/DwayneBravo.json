@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Dwayne Bravo",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "29th Match (N)",
+        "date": "Oct 13 2020",
+        "venue": "Dubai",
+        "matchResult": "Super Kings won by 20 runs",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "Dwayne Bravo",
+        "runs": "7",
+        "balls": "5",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "140.00",
+        "game": "25th Match (N)",
+        "date": "Oct 10 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 37 runs",
+        "opponent": "Royal Challengers Bangalore"
+    }
+]

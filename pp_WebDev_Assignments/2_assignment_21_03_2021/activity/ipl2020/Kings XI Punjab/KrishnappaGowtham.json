@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Krishnappa Gowtham",
+        "runs": "20",
+        "balls": "14",
+        "fours": "1",
+        "sixes": "1",
+        "strikeRate": "142.86",
+        "game": "2nd Match (N)",
+        "date": "Sep 20 2020",
+        "venue": "Dubai",
+        "matchResult": "Match tied (Capitals won the one-over eliminator)",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Krishnappa Gowtham",
+        "runs": "22",
+        "balls": "13",
+        "fours": "2",
+        "sixes": "1",
+        "strikeRate": "169.23",
+        "game": "13th Match (N)",
+        "date": "Oct 1 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Mum Indians won by 48 runs",
+        "opponent": "Mumbai Indians"
+    }
+]

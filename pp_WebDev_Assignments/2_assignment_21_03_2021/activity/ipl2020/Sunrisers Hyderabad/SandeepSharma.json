@@ -1,0 +1,67 @@
+[
+    {
+        "playerName": "Sandeep Sharma",
+        "runs": "2",
+        "balls": "4",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "50.00",
+        "game": "Qualifier 2 (N)",
+        "date": "Nov 8 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Capitals won by 17 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "runs": "0",
+        "balls": "2",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "43rd Match (N)",
+        "date": "Oct 24 2020",
+        "venue": "Dubai",
+        "matchResult": "Kings XI won by 12 runs",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "runs": "1",
+        "balls": "2",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "50.00",
+        "game": "29th Match (N)",
+        "date": "Oct 13 2020",
+        "venue": "Dubai",
+        "matchResult": "Super Kings won by 20 runs",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "runs": "9",
+        "balls": "6",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "150.00",
+        "game": "3rd Match (N)",
+        "date": "Sep 21 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 10 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Sandeep Sharma",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "17th Match",
+        "date": "Oct 4 2020",
+        "venue": "Sharjah",
+        "matchResult": "Mum Indians won by 34 runs",
+        "opponent": "Mumbai Indians"
+    }
+]

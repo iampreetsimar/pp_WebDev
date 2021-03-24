@@ -1,0 +1,93 @@
+[
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "2",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "66.67",
+        "game": "8th Match (N)",
+        "date": "Sep 26 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "KKR won by 7 wickets (with 12 balls remaining)",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "31",
+        "balls": "24",
+        "fours": "4",
+        "sixes": "1",
+        "strikeRate": "129.17",
+        "game": "14th Match (N)",
+        "date": "Oct 2 2020",
+        "venue": "Dubai",
+        "matchResult": "Sunrisers won by 7 runs",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "8",
+        "balls": "5",
+        "fours": "0",
+        "sixes": "1",
+        "strikeRate": "160.00",
+        "game": "52nd Match (N)",
+        "date": "Oct 31 2020",
+        "venue": "Sharjah",
+        "matchResult": "Sunrisers won by 5 wickets (with 35 balls remaining)",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "7",
+        "balls": "4",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "175.00",
+        "game": "3rd Match (N)",
+        "date": "Sep 21 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 10 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "12",
+        "balls": "6",
+        "fours": "1",
+        "sixes": "1",
+        "strikeRate": "200.00",
+        "game": "22nd Match (N)",
+        "date": "Oct 8 2020",
+        "venue": "Dubai",
+        "matchResult": "Sunrisers won by 69 runs",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "10",
+        "balls": "13",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "76.92",
+        "game": "17th Match",
+        "date": "Oct 4 2020",
+        "venue": "Sharjah",
+        "matchResult": "Mum Indians won by 34 runs",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Abhishek Sharma",
+        "runs": "1",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "11th Match (N)",
+        "date": "Sep 29 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Sunrisers won by 15 runs",
+        "opponent": "Delhi Capitals"
+    }
+]

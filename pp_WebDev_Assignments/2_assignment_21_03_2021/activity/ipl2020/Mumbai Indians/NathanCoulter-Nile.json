@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Nathan Coulter-Nile",
+        "runs": "1",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "33.33",
+        "game": "56th Match (N)",
+        "date": "Nov 3 2020",
+        "venue": "Sharjah",
+        "matchResult": "Sunrisers won by 10 wickets (with 17 balls remaining)",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "Nathan Coulter-Nile",
+        "runs": "24",
+        "balls": "12",
+        "fours": "4",
+        "sixes": "0",
+        "strikeRate": "200.00",
+        "game": "36th Match (N)",
+        "date": "Oct 18 2020",
+        "venue": "Dubai",
+        "matchResult": "Match tied (Kings XI won the one-over eliminator)",
+        "opponent": "Kings XI Punjab"
+    }
+]

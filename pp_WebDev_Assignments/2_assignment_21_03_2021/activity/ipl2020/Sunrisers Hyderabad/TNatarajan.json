@@ -1,0 +1,41 @@
+[
+    {
+        "playerName": "T Natarajan",
+        "runs": "0",
+        "balls": "0",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "43rd Match (N)",
+        "date": "Oct 24 2020",
+        "venue": "Dubai",
+        "matchResult": "Kings XI won by 12 runs",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "T Natarajan",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "29th Match (N)",
+        "date": "Oct 13 2020",
+        "venue": "Dubai",
+        "matchResult": "Super Kings won by 20 runs",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "T Natarajan",
+        "runs": "3",
+        "balls": "4",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "75.00",
+        "game": "3rd Match (N)",
+        "date": "Sep 21 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 10 runs",
+        "opponent": "Royal Challengers Bangalore"
+    }
+]

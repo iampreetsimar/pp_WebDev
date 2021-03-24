@@ -1,0 +1,93 @@
+[
+    {
+        "playerName": "Chris Gayle",
+        "runs": "12",
+        "balls": "19",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "63.16",
+        "game": "53rd Match",
+        "date": "Nov 1 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Super Kings won by 9 wickets (with 7 balls remaining)",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "99",
+        "balls": "63",
+        "fours": "6",
+        "sixes": "8",
+        "strikeRate": "157.14",
+        "game": "50th Match (N)",
+        "date": "Oct 30 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Royals won by 7 wickets (with 15 balls remaining)",
+        "opponent": "Rajasthan Royals"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "51",
+        "balls": "29",
+        "fours": "2",
+        "sixes": "5",
+        "strikeRate": "175.86",
+        "game": "46th Match (N)",
+        "date": "Oct 26 2020",
+        "venue": "Sharjah",
+        "matchResult": "Kings XI won by 8 wickets (with 7 balls remaining)",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "29",
+        "balls": "13",
+        "fours": "3",
+        "sixes": "2",
+        "strikeRate": "223.08",
+        "game": "38th Match (N)",
+        "date": "Oct 20 2020",
+        "venue": "Dubai",
+        "matchResult": "Kings XI won by 5 wickets (with 6 balls remaining)",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "20",
+        "balls": "20",
+        "fours": "2",
+        "sixes": "1",
+        "strikeRate": "100.00",
+        "game": "43rd Match (N)",
+        "date": "Oct 24 2020",
+        "venue": "Dubai",
+        "matchResult": "Kings XI won by 12 runs",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "24",
+        "balls": "21",
+        "fours": "1",
+        "sixes": "2",
+        "strikeRate": "114.29",
+        "game": "36th Match (N)",
+        "date": "Oct 18 2020",
+        "venue": "Dubai",
+        "matchResult": "Match tied (Kings XI won the one-over eliminator)",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Chris Gayle",
+        "runs": "53",
+        "balls": "45",
+        "fours": "1",
+        "sixes": "5",
+        "strikeRate": "117.78",
+        "game": "31st Match (N)",
+        "date": "Oct 15 2020",
+        "venue": "Sharjah",
+        "matchResult": "Kings XI won by 8 wickets",
+        "opponent": "Royal Challengers Bangalore"
+    }
+]

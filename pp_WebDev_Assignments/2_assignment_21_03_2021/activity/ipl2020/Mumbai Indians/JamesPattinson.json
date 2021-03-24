@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "James Pattinson",
+        "runs": "4",
+        "balls": "5",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "80.00",
+        "game": "56th Match (N)",
+        "date": "Nov 3 2020",
+        "venue": "Sharjah",
+        "matchResult": "Sunrisers won by 10 wickets (with 17 balls remaining)",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "James Pattinson",
+        "runs": "11",
+        "balls": "8",
+        "fours": "2",
+        "sixes": "0",
+        "strikeRate": "137.50",
+        "game": "1st Match (N)",
+        "date": "Sep 19 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Super Kings won by 5 wickets (with 4 balls remaining)",
+        "opponent": "Chennai Super Kings"
+    }
+]

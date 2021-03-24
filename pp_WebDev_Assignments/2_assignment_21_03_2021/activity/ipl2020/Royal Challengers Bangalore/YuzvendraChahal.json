@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Yuzvendra Chahal",
+        "runs": "0",
+        "balls": "0",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "19th Match (N)",
+        "date": "Oct 5 2020",
+        "venue": "Dubai",
+        "matchResult": "Capitals won by 59 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Yuzvendra Chahal",
+        "runs": "1",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "33.33",
+        "game": "6th Match (N)",
+        "date": "Sep 24 2020",
+        "venue": "Dubai",
+        "matchResult": "Kings XI won by 97 runs",
+        "opponent": "Kings XI Punjab"
+    }
+]

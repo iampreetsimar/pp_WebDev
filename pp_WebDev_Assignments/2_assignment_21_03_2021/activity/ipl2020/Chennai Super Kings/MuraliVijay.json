@@ -1,0 +1,41 @@
+[
+    {
+        "playerName": "Murali Vijay",
+        "runs": "10",
+        "balls": "15",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "66.67",
+        "game": "7th Match (N)",
+        "date": "Sep 25 2020",
+        "venue": "Dubai",
+        "matchResult": "Capitals won by 44 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Murali Vijay",
+        "runs": "21",
+        "balls": "21",
+        "fours": "3",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "4th Match (N)",
+        "date": "Sep 22 2020",
+        "venue": "Sharjah",
+        "matchResult": "Royals won by 16 runs",
+        "opponent": "Rajasthan Royals"
+    },
+    {
+        "playerName": "Murali Vijay",
+        "runs": "1",
+        "balls": "7",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "14.29",
+        "game": "1st Match (N)",
+        "date": "Sep 19 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Super Kings won by 5 wickets (with 4 balls remaining)",
+        "opponent": "Mumbai Indians"
+    }
+]

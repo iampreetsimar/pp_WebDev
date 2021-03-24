@@ -1,0 +1,54 @@
+[
+    {
+        "playerName": "Wriddhiman Saha",
+        "runs": "58",
+        "balls": "45",
+        "fours": "7",
+        "sixes": "1",
+        "strikeRate": "128.89",
+        "game": "56th Match (N)",
+        "date": "Nov 3 2020",
+        "venue": "Sharjah",
+        "matchResult": "Sunrisers won by 10 wickets (with 17 balls remaining)",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Wriddhiman Saha",
+        "runs": "30",
+        "balls": "31",
+        "fours": "1",
+        "sixes": "1",
+        "strikeRate": "96.77",
+        "game": "8th Match (N)",
+        "date": "Sep 26 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "KKR won by 7 wickets (with 12 balls remaining)",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Wriddhiman Saha",
+        "runs": "87",
+        "balls": "45",
+        "fours": "12",
+        "sixes": "2",
+        "strikeRate": "193.33",
+        "game": "47th Match (N)",
+        "date": "Oct 27 2020",
+        "venue": "Dubai",
+        "matchResult": "Sunrisers won by 88 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Wriddhiman Saha",
+        "runs": "39",
+        "balls": "32",
+        "fours": "4",
+        "sixes": "1",
+        "strikeRate": "121.88",
+        "game": "52nd Match (N)",
+        "date": "Oct 31 2020",
+        "venue": "Sharjah",
+        "matchResult": "Sunrisers won by 5 wickets (with 35 balls remaining)",
+        "opponent": "Royal Challengers Bangalore"
+    }
+]

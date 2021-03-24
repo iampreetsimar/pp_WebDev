@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Shardul Thakur",
+        "runs": "1",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "25th Match (N)",
+        "date": "Oct 10 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 37 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Shardul Thakur",
+        "runs": "11",
+        "balls": "20",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "55.00",
+        "game": "41st Match (N)",
+        "date": "Oct 23 2020",
+        "venue": "Sharjah",
+        "matchResult": "Mum Indians won by 10 wickets (with 46 balls remaining)",
+        "opponent": "Mumbai Indians"
+    }
+]

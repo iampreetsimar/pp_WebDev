@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Prasidh Krishna",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "46th Match (N)",
+        "date": "Oct 26 2020",
+        "venue": "Sharjah",
+        "matchResult": "Kings XI won by 8 wickets (with 7 balls remaining)",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Prasidh Krishna",
+        "runs": "2",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "66.67",
+        "game": "28th Match (N)",
+        "date": "Oct 12 2020",
+        "venue": "Sharjah",
+        "matchResult": "RCB won by 82 runs",
+        "opponent": "Royal Challengers Bangalore"
+    }
+]

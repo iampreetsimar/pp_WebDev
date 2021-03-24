@@ -1,0 +1,41 @@
+[
+    {
+        "playerName": "Deepak Chahar",
+        "runs": "2",
+        "balls": "2",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "29th Match (N)",
+        "date": "Oct 13 2020",
+        "venue": "Dubai",
+        "matchResult": "Super Kings won by 20 runs",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "Deepak Chahar",
+        "runs": "5",
+        "balls": "5",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "25th Match (N)",
+        "date": "Oct 10 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 37 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Deepak Chahar",
+        "runs": "0",
+        "balls": "5",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "41st Match (N)",
+        "date": "Oct 23 2020",
+        "venue": "Sharjah",
+        "matchResult": "Mum Indians won by 10 wickets (with 46 balls remaining)",
+        "opponent": "Mumbai Indians"
+    }
+]

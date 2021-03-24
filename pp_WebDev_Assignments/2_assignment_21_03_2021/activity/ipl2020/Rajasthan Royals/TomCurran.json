@@ -1,0 +1,54 @@
+[
+    {
+        "playerName": "Tom Curran",
+        "runs": "10",
+        "balls": "9",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "111.11",
+        "game": "4th Match (N)",
+        "date": "Sep 22 2020",
+        "venue": "Sharjah",
+        "matchResult": "Royals won by 16 runs",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "Tom Curran",
+        "runs": "4",
+        "balls": "1",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "400.00",
+        "game": "9th Match (N)",
+        "date": "Sep 27 2020",
+        "venue": "Sharjah",
+        "matchResult": "Royals won by 4 wickets (with 3 balls remaining)",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Tom Curran",
+        "runs": "15",
+        "balls": "16",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "93.75",
+        "game": "20th Match (N)",
+        "date": "Oct 6 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Mum Indians won by 57 runs",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Tom Curran",
+        "runs": "54",
+        "balls": "36",
+        "fours": "2",
+        "sixes": "3",
+        "strikeRate": "150.00",
+        "game": "12th Match (N)",
+        "date": "Sep 30 2020",
+        "venue": "Dubai",
+        "matchResult": "KKR won by 37 runs",
+        "opponent": "Kolkata Knight Riders"
+    }
+]

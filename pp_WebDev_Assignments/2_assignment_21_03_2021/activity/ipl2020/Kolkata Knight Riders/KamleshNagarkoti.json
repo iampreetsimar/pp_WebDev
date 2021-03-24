@@ -1,0 +1,80 @@
+[
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "6",
+        "balls": "13",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "46.15",
+        "game": "46th Match (N)",
+        "date": "Oct 26 2020",
+        "venue": "Sharjah",
+        "matchResult": "Kings XI won by 8 wickets (with 7 balls remaining)",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "1",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "54th Match (N)",
+        "date": "Nov 1 2020",
+        "venue": "Dubai",
+        "matchResult": "KKR won by 60 runs",
+        "opponent": "Rajasthan Royals"
+    },
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "0",
+        "balls": "2",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "21st Match (N)",
+        "date": "Oct 7 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "KKR won by 10 runs",
+        "opponent": "Chennai Super Kings"
+    },
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "3",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "100.00",
+        "game": "16th Match (N)",
+        "date": "Oct 3 2020",
+        "venue": "Sharjah",
+        "matchResult": "Capitals won by 18 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "4",
+        "balls": "7",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "57.14",
+        "game": "28th Match (N)",
+        "date": "Oct 12 2020",
+        "venue": "Sharjah",
+        "matchResult": "RCB won by 82 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Kamlesh Nagarkoti",
+        "runs": "8",
+        "balls": "5",
+        "fours": "1",
+        "sixes": "0",
+        "strikeRate": "160.00",
+        "game": "12th Match (N)",
+        "date": "Sep 30 2020",
+        "venue": "Dubai",
+        "matchResult": "KKR won by 37 runs",
+        "opponent": "Rajasthan Royals"
+    }
+]

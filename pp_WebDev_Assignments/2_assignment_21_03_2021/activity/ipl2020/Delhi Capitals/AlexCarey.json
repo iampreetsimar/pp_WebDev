@@ -1,0 +1,41 @@
+[
+    {
+        "playerName": "Alex Carey",
+        "runs": "14",
+        "balls": "9",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "155.56",
+        "game": "27th Match (N)",
+        "date": "Oct 11 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Mum Indians won by 5 wickets (with 2 balls remaining)",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Alex Carey",
+        "runs": "14",
+        "balls": "13",
+        "fours": "0",
+        "sixes": "1",
+        "strikeRate": "107.69",
+        "game": "30th Match (N)",
+        "date": "Oct 14 2020",
+        "venue": "Dubai",
+        "matchResult": "Capitals won by 13 runs",
+        "opponent": "Rajasthan Royals"
+    },
+    {
+        "playerName": "Alex Carey",
+        "runs": "4",
+        "balls": "7",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "57.14",
+        "game": "34th Match (N)",
+        "date": "Oct 17 2020",
+        "venue": "Sharjah",
+        "matchResult": "Capitals won by 5 wickets (with 1 ball remaining)",
+        "opponent": "Chennai Super Kings"
+    }
+]

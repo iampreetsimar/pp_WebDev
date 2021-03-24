@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Shreevats Goswami",
+        "runs": "0",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "Eliminator (N)",
+        "date": "Nov 6 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Sunrisers won by 6 wickets (with 2 balls remaining)",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Shreevats Goswami",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "Qualifier 2 (N)",
+        "date": "Nov 8 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Capitals won by 17 runs",
+        "opponent": "Delhi Capitals"
+    }
+]

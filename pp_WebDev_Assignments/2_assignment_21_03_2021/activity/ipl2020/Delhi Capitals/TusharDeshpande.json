@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Tushar Deshpande",
+        "runs": "1",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "33.33",
+        "game": "42nd Match",
+        "date": "Oct 24 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "KKR won by 59 runs",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Tushar Deshpande",
+        "runs": "20",
+        "balls": "9",
+        "fours": "2",
+        "sixes": "1",
+        "strikeRate": "222.22",
+        "game": "47th Match (N)",
+        "date": "Oct 27 2020",
+        "venue": "Dubai",
+        "matchResult": "Sunrisers won by 88 runs",
+        "opponent": "Sunrisers Hyderabad"
+    }
+]

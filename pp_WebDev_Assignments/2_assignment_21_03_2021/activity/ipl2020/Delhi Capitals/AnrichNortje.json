@@ -1,0 +1,67 @@
+[
+    {
+        "playerName": "Anrich Nortje",
+        "runs": "3",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "300.00",
+        "game": "2nd Match (N)",
+        "date": "Sep 20 2020",
+        "venue": "Dubai",
+        "matchResult": "Match tied (Capitals won the one-over eliminator)",
+        "opponent": "Kings XI Punjab"
+    },
+    {
+        "playerName": "Anrich Nortje",
+        "runs": "0",
+        "balls": "0",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "Qualifier 1 (N)",
+        "date": "Nov 5 2020",
+        "venue": "Dubai",
+        "matchResult": "Mum Indians won by 57 runs",
+        "opponent": "Mumbai Indians"
+    },
+    {
+        "playerName": "Anrich Nortje",
+        "runs": "0",
+        "balls": "0",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "42nd Match",
+        "date": "Oct 24 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "KKR won by 59 runs",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Anrich Nortje",
+        "runs": "1",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "33.33",
+        "game": "47th Match (N)",
+        "date": "Oct 27 2020",
+        "venue": "Dubai",
+        "matchResult": "Sunrisers won by 88 runs",
+        "opponent": "Sunrisers Hyderabad"
+    },
+    {
+        "playerName": "Anrich Nortje",
+        "runs": "3",
+        "balls": "2",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "150.00",
+        "game": "11th Match (N)",
+        "date": "Sep 29 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Sunrisers won by 15 runs",
+        "opponent": "Sunrisers Hyderabad"
+    }
+]

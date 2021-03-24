@@ -1,0 +1,28 @@
+[
+    {
+        "playerName": "Narayan Jagadeesan",
+        "runs": "33",
+        "balls": "28",
+        "fours": "4",
+        "sixes": "0",
+        "strikeRate": "117.86",
+        "game": "25th Match (N)",
+        "date": "Oct 10 2020",
+        "venue": "Dubai",
+        "matchResult": "RCB won by 37 runs",
+        "opponent": "Royal Challengers Bangalore"
+    },
+    {
+        "playerName": "Narayan Jagadeesan",
+        "runs": "0",
+        "balls": "1",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "41st Match (N)",
+        "date": "Oct 23 2020",
+        "venue": "Sharjah",
+        "matchResult": "Mum Indians won by 10 wickets (with 46 balls remaining)",
+        "opponent": "Mumbai Indians"
+    }
+]

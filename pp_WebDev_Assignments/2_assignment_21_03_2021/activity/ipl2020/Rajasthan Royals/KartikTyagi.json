@@ -1,0 +1,41 @@
+[
+    {
+        "playerName": "Kartik Tyagi",
+        "runs": "2",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "66.67",
+        "game": "54th Match (N)",
+        "date": "Nov 1 2020",
+        "venue": "Dubai",
+        "matchResult": "KKR won by 60 runs",
+        "opponent": "Kolkata Knight Riders"
+    },
+    {
+        "playerName": "Kartik Tyagi",
+        "runs": "2",
+        "balls": "3",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "66.67",
+        "game": "23rd Match (N)",
+        "date": "Oct 9 2020",
+        "venue": "Sharjah",
+        "matchResult": "Capitals won by 46 runs",
+        "opponent": "Delhi Capitals"
+    },
+    {
+        "playerName": "Kartik Tyagi",
+        "runs": "0",
+        "balls": "0",
+        "fours": "0",
+        "sixes": "0",
+        "strikeRate": "0.00",
+        "game": "20th Match (N)",
+        "date": "Oct 6 2020",
+        "venue": "Abu Dhabi",
+        "matchResult": "Mum Indians won by 57 runs",
+        "opponent": "Mumbai Indians"
+    }
+]
