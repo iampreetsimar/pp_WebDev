@@ -18,6 +18,13 @@ console.log("Before");
     State becomes fulfilled after the work is complete
 
     We get a token promise object where state is pending initially
+
+    A Promise is an object representing the eventual completion or failure of an asynchronous operation. 
+    Essentially, a promise is a returned object to which you attach callbacks, 
+    instead of passing callbacks into a function.
+    
+    To consume a promise - Then and catch are async functions.
+
 */
 
 let promise = fs.promises.readFile("f1.txt", "utf8");
