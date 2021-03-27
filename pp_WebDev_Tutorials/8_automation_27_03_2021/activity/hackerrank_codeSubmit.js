@@ -10,11 +10,12 @@ browserPromise
     .then(function(browserInstance) {
         instance = browserInstance;
         // return is necessary - if not present, next then will execute immediately
-        return browserInstance.newPage();
+        // pages returns promise of list of all tabs
+        return browserInstance.pages();
     }).then(function(newTab) {
         // open hackerrank login page
-        let openLoginPagePromise = newTab.goto("https://www.hackerrank.com/auth/login?h_l=body_middle_left_button&h_r=login");
-        tab = newTab;
+        let openLoginPagePromise = newTab[0].goto("https://www.hackerrank.com/auth/login?h_l=body_middle_left_button&h_r=login");
+        tab = newTab[0];
         return openLoginPagePromise;
     }).then(function() {
         // type email into input field
