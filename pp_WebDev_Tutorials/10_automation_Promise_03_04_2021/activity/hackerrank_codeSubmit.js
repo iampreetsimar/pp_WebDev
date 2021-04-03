@@ -36,47 +36,38 @@ browserPromise
         // click on login button
         console.log("...clicked on login button");
         let loginButtonClickedPromise = tab.click("button[data-analytics='LoginPassword']");
-        return Promise.all([
-            loginButtonClickedPromise, 
 
-            /*
-                waitUntil - load, domcontentloaded, networkidle0, networkidle2
-                mostly used - networkidle0 - normal sites
-                              networkidle2 - realtime sites, social media sites where data is updated at all times
-            */
+        // added code refactoring tp use CUSTOM PROMISE
+        // return Promise.all([
+        //     loginButtonClickedPromise, 
 
-            tab.waitForNavigation({ waitUntil: "networkidle0" }),
-            tab.waitForSelector("#base-card-1-link")
-        ]);
+        //     /*
+        //         waitUntil - load, domcontentloaded, networkidle0, networkidle2
+        //         mostly used - networkidle0 - normal sites
+        //                       networkidle2 - realtime sites, social media sites where data is updated at all times
+        //     */
+
+        //     tab.waitForNavigation({ waitUntil: "networkidle0" }),
+        // ]);
+
+        return loginButtonClickedPromise;
+
     }).then(function() {
         console.log("Login Successful,", "Home Page Opened,", "...clicked on interview prep button");
-        let interviewPrepCardClickedPromise = tab.click("#base-card-1-link", { delay: 500 });
-        return Promise.all([
-            interviewPrepCardClickedPromise, 
-            tab.waitForNavigation({waitUntil: "networkidle0"}),
-            tab.waitForSelector("a[data-attr1='warmup']")
-        ]);
+        let interviewPrepCardClickedPromise = waitAndClick("#base-card-1-link");
+        return interviewPrepCardClickedPromise;
     }).then(function() {
         console.log("Interview Preparation Page Opened,", "...clicked on warm up challenges");
-        let warmUpChallengePageClickPromise = tab.click("a[data-attr1='warmup']", { delay: 500 });
-        return Promise.all([
-            warmUpChallengePageClickPromise, 
-            tab.waitForNavigation({waitUntil: "networkidle0"}), 
-            tab.waitForSelector("a[data-attr1='sock-merchant']")
-        ]);
+        let warmUpChallengePageClickPromise = waitAndClick("a[data-attr1='warmup']");
+        return warmUpChallengePageClickPromise;
     }).then(function() {
         console.log("Warm Up Challenges Page Opened,", "...clicked on warm up sort by match challenge");
-        let warmUpChallenge1Promise = tab.click("a[data-attr1='sock-merchant']", { delay: 500 });
-        return Promise.all([
-            warmUpChallenge1Promise, 
-            tab.waitForNavigation({ waitUntil: "networkidle0" }),
-            tab.waitForSelector(".view-lines")
-        ]);
+        let warmUpChallengePromise = waitAndClick("a[data-attr1='sock-merchant']");
+        return warmUpChallengePromise;
     }).then(function() {
         console.log("Sales By Match Challenge Page Opened,", "...selecting editor code");
-        return Promise.all([
-            tab.click(".view-lines", { delay: 400 })
-        ]);
+        let codeEditorPromise = waitAndClick(".view-lines");
+        return codeEditorPromise;
     })
 
     // .then(function() {
@@ -112,7 +103,23 @@ browserPromise
 console.log("After");
 
 
-// CUSTOM PROMISE
+// CUSTOM PROMISE TO WAIT FOR SELECTOR AND CLICK ON IT
+function waitAndClick(selector) {
+    return new Promise(function(resolve, reject) {
+        let waitForSelectorPromise = tab.waitForSelector(selector, { visible: true });
+        waitForSelectorPromise
+            .then(function() {
+                let waitForSelectorClick = tab.click(selector, { delay: 500 });
+                return waitForSelectorClick;
+            }).then(function() {
+                resolve();
+            }).catch(function() {
+                reject();
+            })
+    })
+}
+
+// CUSTOM PROMISE TO SUBMIT CODE
 function codeSubmitter() {
     return new Promise(function(resolve, reject) {
         try {
