@@ -1,6 +1,6 @@
 let puppeteer = require("puppeteer");
 let { email, password } = require("../credential");
-let { sockmerchant } = require("./warmUpChallenges_codes");
+let { challenges } = require("./warmUpChallenges_codes");
 let tab, instance;
 
 console.log("Before");
@@ -61,36 +61,18 @@ browserPromise
         let warmUpChallengePageClickPromise = waitAndClick("a[data-attr1='warmup']");
         return warmUpChallengePageClickPromise;
     }).then(function() {
-        console.log("Warm Up Challenges Page Opened,", "...clicked on warm up sort by match challenge");
-        let warmUpChallengePromise = waitAndClick("a[data-attr1='sock-merchant']");
-        return warmUpChallengePromise;
+        console.log("Warm Up Challenges Page Opened,", "...clicking on individual warm up challenge questions");
+
+        // let warmUpChallengePromise = waitAndClick("a[data-attr1='sock-merchant']");
+        // return warmUpChallengePromise;
+
+        // returns current module page url
+        return tab.url();
+    }).then(function(url) {
+        let challengesObject = challenges[0];
+        let codeSubmitPromise = codeSubmitter(url, challengesObject.code, challengesObject.questionName);
+        return codeSubmitPromise;
     }).then(function() {
-        console.log("Sales By Match Challenge Page Opened,", "...selecting editor code");
-        let codeEditorPromise = waitAndClick(".view-lines");
-        return codeEditorPromise;
-    })
-
-    // .then(function() {
-    //     console.log("...clicked on sort by match challenge editorial tab");
-    //     let salesByMatchChallengeEditorialClickedPromise = tab.click("div[data-attr2='Editorial']", { delay: 200 });
-    //     return Promise.all([
-    //         salesByMatchChallengeEditorialClickedPromise, 
-    //         tab.waitForNavigation({ waitUntil: "networkidle0" }),
-    //         tab.waitForSelector("button[class='ui-btn ui-btn-normal ui-btn-primary ui-btn-styled']")
-    //     ]);
-    // }).then(function() {
-    //     console.log("Sales By Match Challenge Editorial Opened");
-    //     return tab.mouse.wheel({ deltaY: 500 });
-    // })
-
-    // .then(function() {
-    //     let codeSubmitPromise = codeSubmitter();
-    //     return codeSubmitPromise;
-    // }).then(function(codeSubmitStatus) {
-    //     console.log(codeSubmitStatus);
-    // })
-
-    .then(function() {
         setTimeout(function() {
             // close browser instance
             //instance.close();
@@ -119,15 +101,37 @@ function waitAndClick(selector) {
     })
 }
 
-// CUSTOM PROMISE TO SUBMIT CODE
-function codeSubmitter() {
+// CUSTOM PROMISE TO SUBMIT CODE 
+// <INPUT> url of the module page, the code to be submitted for the challenge, the question name
+function codeSubmitter(modulePageURL, code, questionName) {
     return new Promise(function(resolve, reject) {
-        try {
-            let status = submitCode();
-            resolve(status);
-        } catch {
-            reject(err);
-        }
+        
+        // visit module challenges page
+        let modulePagePromise = tab.goto(modulePageURL);
+        modulePagePromise
+            .then(function() {
+
+                // from page -> select all h4 elements having question names -> get matched question name -> click on the question card
+                // evaluate will be executed inside browser console
+                function browserConsoleFunction(questionName) {
+                    let questionElement = document.querySelectorAll("h4");
+                    let questionNamesArr = [];
+                    for(let i = 0; i < questionElement.length; i++) {
+                        let qName = questionElement[i].innerText.split("\n")[0];
+                        questionNamesArr.push(qName);
+                    }
+
+                    let idx = questionNamesArr.indexOf(questionName);
+                    questionElement[idx].click();
+                };
+
+                let challengePageClickPromise = tab.evaluate(browserConsoleFunction, questionName);
+                return challengePageClickPromise;
+            }).then(function() {
+                resolve();
+            }).catch(function() {
+                reject();
+            })
     });
 }
 
