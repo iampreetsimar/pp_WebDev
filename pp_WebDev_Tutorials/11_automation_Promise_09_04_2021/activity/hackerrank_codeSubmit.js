@@ -66,8 +66,15 @@ browserPromise
         return tab.url();
     }).then(function(url) {
         let challengesObject = challenges[0];
-        let codeSubmitPromise = codeSubmitter(url, challengesObject.code, challengesObject.questionName);
-        return codeSubmitPromise;
+        let challengesPromise = codeSubmitter(url, challengesObject.code, challengesObject.questionName);
+        for(let i = 1; i < challenges.length; i++) {
+            challengesPromise = challengesPromise.then(function() {
+                return codeSubmitter(url, challenges[i].code, challenges[i].questionName);
+            })
+        }
+        return challengesPromise;
+    }).then(function() {
+        console.log("All challenges submitted");
     }).then(function() {
         setTimeout(function() {
             // close browser instance
