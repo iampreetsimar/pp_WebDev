@@ -45,6 +45,10 @@ console.log("Before");
         }
     
         console.log("All challenges submitted");
+
+        // go back to module page
+        await tab.goto(url);
+
         setTimeout(function() {
             // close browser instance
             // instance.close();
@@ -56,7 +60,6 @@ console.log("Before");
 })();
 
 console.log("After");
-
 
 // CUSTOM ASYNC FUNCTION TO WAIT FOR SELECTOR AND CLICK ON IT
 async function waitAndClick(selector, tab) {
@@ -71,67 +74,53 @@ async function waitAndClick(selector, tab) {
 // <INPUT> url of the module page, the code to be submitted for the challenge, the question name
 async function codeSubmitter(modulePageURL, code, questionName, tab) {
     // visit module challenges page
-    let modulePagePromise = await tab.goto(modulePageURL);
-    modulePagePromise
-        .then(function() {
+    await tab.goto(modulePageURL);
 
-            // from page -> select all h4 elements having question names -> get matched question name -> click on the question card
-            // evaluate will be executed inside browser console
-            function browserConsoleFunction(questionName) {
-                let questionElement = document.querySelectorAll("h4");
-                let questionNamesArr = [];
-                for(let i = 0; i < questionElement.length; i++) {
-                    let qName = questionElement[i].innerText.split("\n")[0];
-                    questionNamesArr.push(qName);
-                }
+    // from page -> select all h4 elements having question names -> get matched question name -> click on the question card
+    // evaluate will be executed inside browser console
+    function browserConsoleFunction(questionName) {
+        let questionElement = document.querySelectorAll("h4");
+        let questionNamesArr = [];
+        for(let i = 0; i < questionElement.length; i++) {
+            let qName = questionElement[i].innerText.split("\n")[0];
+            questionNamesArr.push(qName);
+        }
 
-                let idx = questionNamesArr.indexOf(questionName);
-                questionElement[idx].click();
-            };
+        let idx = questionNamesArr.indexOf(questionName);
+        questionElement[idx].click();
+    };
 
-            // evaluate takes the function to be run in console + arguments to pass to the said function
-            let challengePageClickPromise = tab.evaluate(browserConsoleFunction, questionName);
-            return challengePageClickPromise;
-        })
+    // evaluate takes the function to be run in console + arguments to pass to the said function
+    await tab.evaluate(browserConsoleFunction, questionName);
+    
+    // this part of code will run fine in Windows but not on MAC - Any keyboard event with Ctrl will not work
         
-        // this part of code will run fine in Windows but not on MAC - Any keyboard event with Ctrl will not work
-        .then(function() {
-            // click on checkbox
-            let inputWillBeClickedPromise = waitAndClick(".custom-checkbox.inline");
-            return inputWillBeClickedPromise;
-        }).then(function () {
-            // type the code 
-            let codeWillBeTypedPromise = tab.type(".custominput", code);
-            return codeWillBeTypedPromise;
-        }).then(function () {
-            // hold down Control
-            let holdControlDownPromise = tab.keyboard.down("Control");
-            return holdControlDownPromise;
-        }).then(function () {
-            // Press ctrl a
-            let pressApromise = tab.keyboard.press("a");
-            return pressApromise;
-        }).then(function () {
-            // Press ctrl x to cut code typed in input
-            let cutPromise = tab.keyboard.press("x");
-            return cutPromise;
-        }).then(function () {
-            // editor will be clicked
-            let editorWillBeClickedPromise = tab.click(".monaco-editor.no-user-select.vs");
-            return editorWillBeClickedPromise;
-        }).then(function () {
-            // press ctrl a to select all code already present
-            let aisPressedpromise = gtab.keyboard.press("a");
-            return aisPressedpromise;
-        })
-        .then(function () {
-            // press ctrl v to paste the code selected from input
-            let pastePromise = gtab.keyboard.press("v");
-            return pastePromise;
-        })
-        .then(function () {
-            // click submit code button
-            let submitIsClickedPromise = gtab.click(".pull-right.btn.btn-primary.hr-monaco-submit");
-            return submitIsClickedPromise;
-        })
+    await waitAndClick(".custom-checkbox.inline", toolbar); 
+
+    // type the code 
+    await tab.type(".custominput", code);
+
+    // hold down Control
+    await tab.keyboard.down("Control");
+
+    // Press ctrl a
+    await tab.keyboard.press("a");
+
+    // Press ctrl x to cut code typed in input
+    await tab.keyboard.press("x");
+
+    // editor will be clicked
+    await tab.click(".monaco-editor.no-user-select.vs");
+
+    // press ctrl a to select all code already present
+    await gtab.keyboard.press("a");
+    
+    // press ctrl v to paste the code selected from input
+    await gtab.keyboard.press("v");
+
+    // click submit code button
+    await gtab.click(".pull-right.btn.btn-primary.hr-monaco-submit");
+
+    // hold Control up
+    return tab.keyboard.up("Control");
 }
