@@ -31,13 +31,15 @@ console.log("Before");
         console.log(playlistObject);
 
         let totalVideoCount = Number(playlistObject.videos.split(" ")[0]);
-        let currentVideoCount = await scrollToBottom(tab, "#video-title");
+        let currentVideoCount = await scrollToBottom(tab, "#contents > ytd-playlist-video-renderer");
         while(totalVideoCount - 20 > currentVideoCount) {
-            currentVideoCount = await scrollToBottom(tab, "#video-title");
+            currentVideoCount = await scrollToBottom(tab, "#contents > ytd-playlist-video-renderer");
         }
-        await scrollToBottom(tab, "#video-title");
+        await scrollToBottom(tab, "#contents > ytd-playlist-video-renderer");
 
-        playlistObject.videoDetails = await tab.evaluate(getVideoDetails, "#video-title",
+        playlistObject.videoDetails = await tab.evaluate(getVideoDetails, 
+        "#contents > ytd-playlist-video-renderer",
+        "#video-title",
         "span.style-scope.ytd-thumbnail-overlay-time-status-renderer");
 
         console.table(playlistObject.videoDetails);
@@ -63,32 +65,37 @@ function getStaticDetails(totalVideosSelector) {
     return detailObject;
 }
 
-function getVideoDetails(videoTitleSelector, videoRuntimeSelector) {
-    let videoTitles = document.querySelectorAll(videoTitleSelector);
-    let videoRuntimes = document.querySelectorAll(videoRuntimeSelector);
+function getVideoDetails(cardSelector, videoTitleSelector, videoRuntimeSelector) {
+    let cards = document.querySelectorAll(cardSelector);
+    //let videoTitles = document.querySelectorAll(videoTitleSelector);
+    //let videoRuntimes = document.querySelectorAll(videoRuntimeSelector);
     let videoArr = [];
-    for(let i = 0; i < videoTitles.length; i++) {
-        if(videoTitles[i] && videoRuntimes[i]) {
-            let videoTitle = videoTitles[i].innerText.trim();
-            let videoRuntime = videoRuntimes[i].innerText.trim();
-            videoArr.push({
-                title: videoTitle,
-                runtime: videoRuntime
-            });
+    for(let i = 0; i < cards.length; i++) {
+        if(cards[i]) {
+            let videoTitle = cards[i].querySelector(videoTitleSelector);
+            let videoRuntime = cards[i].querySelector(videoRuntimeSelector);
+            if(videoTitle && videoRuntime) {
+                videoTitle = videoTitle.innerText.trim();
+                videoRuntime = videoRuntime.innerText.trim();
+                videoArr.push({
+                    title: videoTitle,
+                    runtime: videoRuntime
+                });
+            }
         }
     }
 
     return videoArr;
 }
 
-async function scrollToBottom(tab, titleSelector) {
-    function getVideoCount(titleSelector) {
+async function scrollToBottom(tab, cardSelector) {
+    function getVideoCount(cardSelector) {
         window.scrollBy(0, window.innerHeight);
-        let titleElemArr = document.querySelectorAll(titleSelector);
-        return titleElemArr.length;
+        let cardElemArr = document.querySelectorAll(cardSelector);
+        return cardElemArr.length;
     }
 
-    return tab.evaluate(getVideoCount, titleSelector);
+    return tab.evaluate(getVideoCount, cardSelector);
 }
 
 console.log("After");
