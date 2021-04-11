@@ -12,24 +12,20 @@ console.log("Before");
         });
     
         // fetch listing from amazon
-        console.log("***************** AMAZON DETAILS *****************");
-        let amazonProductDetails = await getListingFromAmazon(browserInstance, homepageUrls[0], input);
-        console.table(amazonProductDetails);
-        console.log("**************************************************\n");
+        let amazonProductDetails = getListingFromAmazon(browserInstance, homepageUrls[0], input);
 
         // fetch listing from flipkart
-        console.log("***************** FLIPKART DETAILS *****************");
-        let flipkartProductDetails = await getListingFromFlipkart(browserInstance, homepageUrls[1], input);
-        console.table(flipkartProductDetails);
-        console.log("**************************************************\n");
+        let flipkartProductDetails = getListingFromFlipkart(browserInstance, homepageUrls[1], input);
 
         // fetch listing from paytm mall
-        console.log("***************** PAYTM MALL DETAILS *****************");
-        let paytmProductDetails = await getListingFromPaytm(browserInstance, homepageUrls[2], input);
-        console.table(paytmProductDetails);
-        console.log("**************************************************\n");
+        let paytmProductDetails = getListingFromPaytm(browserInstance, homepageUrls[2], input);
 
-        
+        let productDetails = await Promise.all([amazonProductDetails, flipkartProductDetails, paytmProductDetails]);
+        for(let i = 0; i < productDetails.length; i++) {
+            console.table(productDetails[i]);
+            console.log("*******************************")
+        }
+
         // close browser instance
         console.log("... closing Browser Instance Closed");
         await browserInstance.close();
@@ -62,6 +58,7 @@ async function getListingFromAmazon(browserInstance, url, input) {
             let productName = searchedRows[i].querySelector(pNameSelector).innerText;
             let productPrice = searchedRows[i].querySelector(priceSelector).innerText;
             productDetails.push({
+                site: "Amazon",
                 name: productName,
                 price: productPrice
             });
@@ -110,6 +107,7 @@ async function getListingFromFlipkart(browserInstance, url, input) {
             let productName = searchedRows[i].querySelector(pNameSelector).innerText;
             let productPrice = searchedRows[i].querySelector(priceSelector).innerText;
             productDetails.push({
+                site: "Flipkart",
                 name: productName,
                 price: productPrice
             });
@@ -151,6 +149,7 @@ async function getListingFromPaytm(browserInstance, url, input) {
             let productName = searchedRows[i].querySelector(pNameSelector).innerText;
             let productPrice = searchedRows[i].querySelector(priceSelector).innerText;
             productDetails.push({
+                site: "Paytm Mall",
                 name: productName,
                 price: productPrice
             });
