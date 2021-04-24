@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-color:whitesmoke;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.todo-container {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    border-radius: 0.2rem;
+    margin: 2vh 0 0 14vw;
+}
+
+.input-container {
+    height: 10vh;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.user-input {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 10vh;
+}
+
+.task-container {
+    text-align: center;
+    width: 100%;
+}
+
+.instruction {
+    margin: 1.5rem auto;
+}
+
+.task-list {
+    padding: 0;
+}
+
+.task {
+    background-color: whitesmoke;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px 1px slategray;
+    list-style: none;
+    width: 90%;
+    border-top: 0.3rem green solid;
+}
