@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: darkcyan;
+            border: 0.2rem black solid;
+            margin: 1rem; 
+            padding: 6 px; 
+        }
+
+        .two {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- given size does not include padding top + bottom size and border top + bottom size -->
+    </div>
+    <div class="box two">
+        <!-- given size includes padding top + bottom size and border top + bottom size -->
+    </div>
+</body>
+</html>

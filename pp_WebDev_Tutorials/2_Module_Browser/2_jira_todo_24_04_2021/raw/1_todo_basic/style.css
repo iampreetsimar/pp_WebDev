@@ -3,8 +3,22 @@ body {
     background-color:whitesmoke;
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    box-sizing: border-box;
 }
+
+/* from 0px to 780px, add this styling */
+/* @media screen and (max-width: 780px) {
+    body {
+        background-color: slategray;
+    }
+}
+
+/* from 78px onwards, add this styling */
+/* @media screen and (min-width: 780px) {
+    body {
+        background-color:yellow;
+    }
+} */ 
 
 .todo-container {
     width: 70vw;
@@ -12,7 +26,7 @@ body {
     flex-direction: column;
     box-shadow: 3px 3px 3px 3px lightgrey;
     border-radius: 0.2rem;
-    margin: 2vh 0 0 14vw;
+    margin: 2vh auto;
 }
 
 .input-container {
@@ -22,10 +36,12 @@ body {
 }
 
 .user-input {
+    display: block;
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
+    width: 80%;
     height: 10vh;
+    margin: 0 auto;
 }
 
 .task-container {
