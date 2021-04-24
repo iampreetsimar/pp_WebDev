@@ -49,4 +49,5 @@ body {
     box-shadow: 1px 1px 1px 1px slategray;
     list-style: none;
     width: 90%;
+    border-top: 0.3rem green solid;
 }
