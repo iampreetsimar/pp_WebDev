@@ -148,7 +148,6 @@ body {
     height: 10em;
     width: 20rem;
     margin: 3rem 2rem;
-    align-self: flex-start;
 }
 
 .task-filter {

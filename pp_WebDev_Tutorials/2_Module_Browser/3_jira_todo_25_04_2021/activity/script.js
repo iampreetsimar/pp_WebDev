@@ -4,6 +4,7 @@ let filter = document.querySelectorAll(".filter");
 let body = document.body;
 let addTask = document.querySelector(".fa-plus");
 let deleteTask = document.querySelector(".fa-trash-alt");
+let modes = ["new", "active", "resolved", "failed"];
 
 for(let i = 0; i < filterColorButton.length; i++) {
     filterColorButton[i].addEventListener("click", function(e) {
@@ -101,4 +102,15 @@ function createTask(todoItem, currentSelectedMode) {
         `;
     
     mainContainer.prepend(taskContainer);
-}
+    changeTaskMode();
+};
+
+function changeTaskMode() {
+    let taskFilter = document.querySelector(".task-filter");
+    taskFilter.addEventListener("click", function(e) {
+        let currentMode = taskFilter.classList[1];
+        let idxCurrentMode = modes.indexOf(currentMode);
+        taskFilter.classList.remove(currentMode);
+        taskFilter.classList.add(modes[(idxCurrentMode + 1) % modes.length]);
+    });
+};
