@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    background-color:whitesmoke;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* from 0px to 780px, add this styling */
+/* @media screen and (max-width: 780px) {
+    body {
+        background-color: slategray;
+    }
+}
+
+/* from 78px onwards, add this styling */
+/* @media screen and (min-width: 780px) {
+    body {
+        background-color:yellow;
+    }
+} */ 
+
+.todo-container {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    border-radius: 0.2rem;
+    margin: 2vh auto;
+}
+
+.input-container {
+    height: 10vh;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.user-input {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+.task-container {
+    text-align: center;
+    width: 100%;
+}
+
+.instruction {
+    margin: 1.5rem auto;
+}
+
+.task-list {
+    padding: 0;
+}
+
+.task {
+    background-color: whitesmoke;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px 1px slategray;
+    list-style: none;
+    width: 90%;
+    border-top: 0.3rem green solid;
+}
