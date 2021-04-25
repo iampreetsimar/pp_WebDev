@@ -27,18 +27,21 @@
             display: flex;
             text-align: center;
 
-            /* for children horizontal alignment */
-            justify-content:space-between;
+            /* for children horizontal alignment around main axis */
+            justify-content: center;
 
-            /* for children vertical alignment */
+            /* for children vertical alignment around subordinate axis */
             align-items: center;
+
+            /* to accomodate extra children in next row */
+            flex-wrap: wrap;
         }
 
         .child {
             background-color: darkgray;
             border: 0.1rem solid black;
             height: 100px;
-            width: 100px;
+            width: 200px;
         }
     </style>
 </head>
@@ -60,6 +63,32 @@
             Child
         </div>
         <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div>
+        <div class="child">
+            Child
+        </div><div class="child">
             Child
         </div>
         <div class="child">
