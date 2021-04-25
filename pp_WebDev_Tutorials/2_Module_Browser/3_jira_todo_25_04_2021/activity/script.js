@@ -6,21 +6,21 @@ let addTask = document.querySelector(".fa-plus");
 let deleteTask = document.querySelector(".fa-trash-alt");
 let modes = ["new", "active", "resolved", "failed"];
 
-for(let i = 0; i < filterColorButton.length; i++) {
-    filterColorButton[i].addEventListener("click", function(e) {
-        // to fetch class added to the button
-        let filterColor = filterColorButton[i].classList[1];
-        if(filterColor == "new") {
-            mainContainer.style.backgroundColor = "black";
-        } else if(filterColor == "active") {
-            mainContainer.style.backgroundColor = "darkseagreen";
-        } else if(filterColor == "resolved") {
-            mainContainer.style.backgroundColor = "cornflowerblue";
-        } else {
-            mainContainer.style.backgroundColor = "crimson";
-        }
-    })
-}
+// for(let i = 0; i < filterColorButton.length; i++) {
+//     filterColorButton[i].addEventListener("click", function(e) {
+//         // to fetch class added to the button
+//         let filterColor = filterColorButton[i].classList[1];
+//         if(filterColor == "new") {
+//             mainContainer.style.backgroundColor = "black";
+//         } else if(filterColor == "active") {
+//             mainContainer.style.backgroundColor = "darkseagreen";
+//         } else if(filterColor == "resolved") {
+//             mainContainer.style.backgroundColor = "cornflowerblue";
+//         } else {
+//             mainContainer.style.backgroundColor = "crimson";
+//         }
+//     })
+// }
 
 addTask.addEventListener("click", createModal);
 
