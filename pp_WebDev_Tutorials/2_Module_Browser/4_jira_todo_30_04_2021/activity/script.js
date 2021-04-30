@@ -123,6 +123,8 @@ function createTask(todoItem, currentSelectedMode, taskId, fromUI) {
     let taskFilter = taskContainer.querySelector(".task-filter");
     taskFilter.addEventListener("click", changeTaskMode);
     taskContainer.addEventListener("click", deleteTask);
+    let taskDescription = taskContainer.querySelector(".task-description");
+    taskDescription.addEventListener("keyup", editTaskDescription);
 };
 
 function changeTaskMode(e) {
@@ -189,4 +191,18 @@ function deleteTask(e) {
             deleteState = false;
         }
     }
+}
+
+function editTaskDescription(e) {
+    let descNode = e.currentTarget;
+    let taskId = descNode.parentNode.children[0].innerText.substring(1);
+
+    // update localStorage
+    for(let i = 0; i < tasklistArray.length; i++) {
+        if(tasklistArray[i].id == taskId) {
+            tasklistArray[i].description = descNode.innerText;
+            break;
+        }
+    }
+    localStorage.setItem("todoApp", JSON.stringify(tasklistArray));
 }

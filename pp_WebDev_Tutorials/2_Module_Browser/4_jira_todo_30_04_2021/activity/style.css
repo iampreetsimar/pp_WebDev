@@ -44,6 +44,10 @@ body {
     align-items: center;
 }
 
+.filter-container > .filter:hover {
+    background-color:darkslategrey;
+}
+
 .filter-color {
     cursor: pointer;
     height: 50%;
@@ -73,6 +77,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.actions:hover {
+    background-color:darkslategrey;
 }
 
 .fas {
@@ -138,6 +146,11 @@ body {
      width: 70%;
      border-radius: 0.2rem;
      cursor: pointer;
+     opacity: 0.75;
+}
+
+.modal-filter-container > .filter:hover {
+    opacity: 1;
 }
 
 .border-class {
@@ -166,7 +179,7 @@ body {
 
 .task-id {
     color: darkslategray;
-    margin-bottom: 0.2rem;
+    margin: 0.3rem 0;
 }
 
 .task-description {
@@ -176,3 +189,4 @@ body {
     overflow-y: auto;
     word-break: break-all;
 }
+
