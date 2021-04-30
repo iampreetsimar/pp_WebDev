@@ -97,20 +97,21 @@ function createTask(todoItem, currentSelectedMode) {
             <div class="task-filter ${currentSelectedMode}"></div>
             <div class="task-description-container">
                 <h3 class="task-id">#example</h3>
-                <div class="task-description">${todoItem}</div>
+                <div class="task-description" contenteditable="true">${todoItem}</div>
             </div>
         `;
     
     mainContainer.prepend(taskContainer);
-    changeTaskMode();
+    let taskFilter = taskContainer.querySelector(".task-filter");
+    taskFilter.addEventListener("click", changeTaskMode);
 };
 
-function changeTaskMode() {
-    let taskFilter = document.querySelector(".task-filter");
-    taskFilter.addEventListener("click", function(e) {
-        let currentMode = taskFilter.classList[1];
-        let idxCurrentMode = modes.indexOf(currentMode);
-        taskFilter.classList.remove(currentMode);
-        taskFilter.classList.add(modes[(idxCurrentMode + 1) % modes.length]);
-    });
+function changeTaskMode(e) {
+    // e.currentTarget - where event listener is added
+    // e.target - where events happens, if event happening in any of the childs of current target, child will be given
+    let taskFilter = e.target;
+    let currentMode = taskFilter.classList[1];
+    let idxCurrentMode = modes.indexOf(currentMode);
+    taskFilter.classList.remove(currentMode);
+    taskFilter.classList.add(modes[(idxCurrentMode + 1) % modes.length]);
 };
