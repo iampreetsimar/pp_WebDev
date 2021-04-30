@@ -81,6 +81,10 @@ body {
     color: aliceblue;
 }
 
+.active-icon {
+    background-color:darkslategrey;
+}
+
 .main-container {
     display: flex;
     flex-wrap: wrap;
