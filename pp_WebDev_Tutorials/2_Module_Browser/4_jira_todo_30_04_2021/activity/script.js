@@ -102,7 +102,11 @@ function createTask(todoItem, currentSelectedMode, taskId, fromUI) {
             <div class="task-filter ${currentSelectedMode}"></div>
             <div class="task-description-container">
                 <h3 class="task-id">#${taskId}</h3>
-                <div class="task-description" contenteditable="true">${todoItem}</div>
+                <div class="task-description">${todoItem}</div>
+                <div class="toggle-lock">
+                    <i class="fas fa-lock toggle-active"></i>
+                    <i class="fas fa-lock-open"></i>
+                </div>
             </div>
         `;
     
@@ -125,7 +129,29 @@ function createTask(todoItem, currentSelectedMode, taskId, fromUI) {
     taskContainer.addEventListener("click", deleteTask);
     let taskDescription = taskContainer.querySelector(".task-description");
     taskDescription.addEventListener("keyup", editTaskDescription);
+    let toggleDescriptonButtons = taskContainer.querySelectorAll(".fas");
+    console.log(toggleDescriptonButtons);
+    for(let i = 0; i < toggleDescriptonButtons.length; i++) {
+        toggleDescriptonButtons[i].addEventListener("click", toggleLock);
+    }
 };
+
+function toggleLock(e) {
+    console.log("heyaa..");
+    let icon = e.currentTarget;
+    let taskDescription = icon.parentNode.parentNode.children[1];
+    if(icon.classList[1] == "fa-lock") {
+        console.log("click on lock");
+        icon.classList.add("toggle-active");
+        icon.parentNode.children[1].classList.remove("toggle-active");
+        taskDescription.contentEditable = false;
+    } else {
+        console.log("click on unlock");
+        icon.classList.add("toggle-active");
+        icon.parentNode.children[0].classList.remove("toggle-active");
+        taskDescription.contentEditable = true;
+    }
+}
 
 function changeTaskMode(e) {
     // e.currentTarget - where event listener is added

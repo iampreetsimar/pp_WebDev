@@ -185,8 +185,22 @@ body {
 .task-description {
     text-align: center;
     font-size: 1.2rem;
-    height: 70%;
+    height: 60%;
     overflow-y: auto;
     word-break: break-all;
+    margin: 0.3rem 0;
 }
 
+.toggle-lock {
+    text-align: end;
+}
+
+.toggle-lock > .fas {
+    font-size: 1rem;
+    color: slategray
+}
+
+.toggle-lock > .toggle-active {
+    color: crimson;
+    pointer-events: none;
+}
