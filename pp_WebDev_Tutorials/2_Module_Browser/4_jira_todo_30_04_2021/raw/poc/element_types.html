@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Elements</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .inline {
+            display: inline;
+            background-color: darkolivegreen;
+            font-size: 1.5rem;
+            /* padding: 0.5rem;
+            margin: 0.5rem; */
+            /* margin: 0 auto; does not work on inline elements */
+        }
+
+        .block-level {
+            box-sizing: border-box;
+            display: block;
+            background-color: goldenrod;
+            margin: 0.5rem auto;
+            padding: 3.5rem;
+            width: 60vw;
+            height: 20vh;
+            text-align: center;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color:dodgerblue;
+            width: 20vw;
+            height: 10vh;
+            /* margin: 0.5rem auto; does not work */
+        }
+    </style>
+</head>
+<body>
+    <!-- INLINE ELEMENTS -->
+    <span class="inline">I am Span</span>
+    <span class="inline">I am Span</span>
+    <a href="" class="inline">Anchor tag</a>
+
+    <!-- BLOCK LEVEL ELEMENTS -->
+    <div class="block-level">I AM BLOCK</div>
+    <div class="block-level">I AM BLOCK</div>
+    <div class="block-level">I AM BLOCK</div>
+
+    <!-- INLINE-BLOCK ELEMENTS -->
+    <div class="inline-block">I AM INLINE BLOCK</div>
+    <div class="inline-block">I AM INLINE BLOCK</div>
+    <div class="inline-block">I AM INLINE BLOCK</div>
+</body>
+</html>

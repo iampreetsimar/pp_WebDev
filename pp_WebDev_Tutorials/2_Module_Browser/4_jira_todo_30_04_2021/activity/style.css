@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar {
+    background-color:darkslategrey;
+    height: 13vh;
+    display: flex;
+    padding: 0 7rem;
+    align-items: center;
+}
+
+.filter-container {
+    background-color:rgb(73, 107, 107);
+    display: flex;
+    height: 60%;
+    margin-right: 4rem;
+    width: 16rem;
+    border-radius: 0.2rem;
+    border: 0.1rem rgb(73, 107, 107) solid;
+}
+
+.action-container {
+    background-color: rgb(73, 107, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 8rem;
+    border-radius: 0.2rem;
+    border: 0.1rem rgb(73, 107, 107) solid; 
+}
+
+.filter {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-color {
+    cursor: pointer;
+    height: 50%;
+    width: 50%;
+    border-radius: 0.2rem;
+}
+
+.new {
+    background-color: black;
+}
+
+.active {
+    background-color:darkseagreen;
+}
+
+.resolved {
+    background-color:cornflowerblue;
+}
+
+.failed {
+    background-color: crimson;
+}
+
+.actions {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* modal */
+.modal-container {
+    height: 20rem;
+    width: 35rem;
+    position: absolute;
+    /* to calculate some value */
+    left: calc((100vw - 35rem) / 2);
+    top: 30vh;
+    display: flex;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.400);
+    border-radius: 1rem;
+}
+
+.input-container {
+    height: 100%;
+    width: 75%;
+}
+
+.modal-filter-container {
+    height: 100%;
+    width: 25%;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.modal-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 2rem 3rem;
+    font-size: 1.7rem;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 145%;
+    font-weight: 400;
+}
+
+.modal-filter-container > .filter {
+     height: 15%;
+     width: 70%;
+     border-radius: 0.2rem;
+     cursor: pointer;
+}
+
+.border-class {
+    border: 0.15rem solid white;
+}
+
+
+/* Task */
+
+.task-container {
+    background-color: white;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.100);
+    height: 10em;
+    width: 20rem;
+    margin: 3rem 2rem;
+}
+
+.task-filter {
+    height: 5%;
+}
+
+.task-description-container {
+    padding: 0 1rem;
+}
+
+.task-description {
+    text-align: center;
+    font-size: 1.2rem;
+}

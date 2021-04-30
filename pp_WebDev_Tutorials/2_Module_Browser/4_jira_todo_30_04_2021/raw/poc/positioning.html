@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .parent {
+            background-color: cadetblue;
+            border: 2px black solid;
+
+            /* to make the position of absolute child w.r.t to the parent element  */
+            position: relative;
+            top: 20px;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 5px dotted white;
+        }
+
+        .first {
+            
+            background-color: darkgray;
+        }
+
+        .second {
+            /* relative to its original position */
+            /* original position is blocked. No other element can occupy its place */
+            position:relative;
+            top: 110px;
+            left: 300px;
+            background-color: olivedrab;
+        }
+
+        .third {
+            /* creates a new layer on top of the original one, adds the element on the new layer */
+            /* orginal position is not blocked */
+            /* If parent is relative/absolute -> absolute position of element will be w.r.t the parent element itself */
+            /* If parent is static -> absolute position of element will be w.r.t. the page */
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            background-color: rgba(205, 134, 63, 0.425);
+        }
+
+        .fourth {
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box first">
+
+        </div>
+        <div class="box second">
+
+        </div>
+        <div class="box third">
+
+        </div>
+        <div class="box fourth">
+
+        </div>
+    </div>
+</body>
+</html>
