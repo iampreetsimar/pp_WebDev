@@ -73,29 +73,6 @@ function setFilterState(e) {
         console.log("No filter selected");
     }
 
-    // if(filterState && !parent.classList.includes("active-icon")) {
-    //     filterState = false;
-        
-    // } else {
-    //     filterState = true;
-    // }
-    // if(!filterState) {
-    //     parent.classList.add("active-icon");
-    //     for(let i = 0; i < todoItems.length; i++) {
-    //         let itemMode = todoItems[i].children[0].classList[1];
-    //         if(selectedFilter == itemMode) {
-    //             todoItems[i].style.display = "block";
-    //         } else {
-    //             todoItems[i].style.display = "none";
-    //         } 
-    //     }
-    // } else {
-    //     parent.classList.remove("active-icon");
-    //     for(let i = 0; i < todoItems.length; i++) {
-    //         todoItems[i].style.display = "block";
-    //     }
-    // }
-
     filterObject.isFilter = !filterObject.isFilter;
 }
 
