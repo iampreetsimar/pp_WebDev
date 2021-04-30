@@ -6,6 +6,10 @@ let addTaskButton = document.querySelector(".fa-plus");
 let deleteTaskButton = document.querySelector(".fa-trash-alt");
 let modes = ["new", "active", "resolved", "failed"];
 let deleteState = false;
+let filterObject = {
+    isFilter: false,
+    currentState: ""
+}
 let uid = new ShortUniqueId();
 let tasklistArray = [];
 
@@ -18,8 +22,82 @@ if(localStorage.getItem("todoApp")) {
     }
 }
 
+// adding event on filter buttons
+for(let i = 0; i < filterColorButton.length; i++) {
+    filterColorButton[i].addEventListener("click", setFilterState);
+}
+
 addTaskButton.addEventListener("click", createModal);
 deleteTaskButton.addEventListener("click", toggleDeleteState);
+
+function setFilterState(e) {
+    let todoItems = mainContainer.querySelectorAll(".task-container");
+    if(!todoItems)
+        return;
+
+    let selectedFilter = e.currentTarget.classList[1];
+    let parent = e.currentTarget.parentNode;
+    if(!filterObject.isFilter && !filterObject.currentState) {
+        filterObject.currentState = selectedFilter;
+        parent.classList.add("active-icon");
+        for(let i = 0; i < todoItems.length; i++) {
+            let itemMode = todoItems[i].children[0].classList[1];
+            if(selectedFilter == itemMode) {
+                todoItems[i].style.display = "block";
+            } else {
+                todoItems[i].style.display = "none";
+            } 
+        }
+        console.log("Displaying items with '" + filterObject.currentState + "' mode");
+    } else if(filterObject.isFilter && filterObject.currentState != selectedFilter) {
+        let idx = modes.indexOf(filterObject.currentState);
+        filterColorButton[idx].parentNode.classList.remove("active-icon");
+        filterObject.currentState = selectedFilter;
+        filterObject.isFilter = false;
+        parent.classList.add("active-icon");
+        for(let i = 0; i < todoItems.length; i++) {
+            let itemMode = todoItems[i].children[0].classList[1];
+            if(selectedFilter == itemMode) {
+                todoItems[i].style.display = "block";
+            } else {
+                todoItems[i].style.display = "none";
+            } 
+        }
+        console.log("Displaying items with '" + filterObject.currentState + "' mode");
+    } else if(filterObject.isFilter && filterObject.currentState == selectedFilter) {
+        filterObject.currentState = "";
+        parent.classList.remove("active-icon");
+        for(let i = 0; i < todoItems.length; i++) {
+            todoItems[i].style.display = "block";
+        }
+        console.log("No filter selected");
+    }
+
+    // if(filterState && !parent.classList.includes("active-icon")) {
+    //     filterState = false;
+        
+    // } else {
+    //     filterState = true;
+    // }
+    // if(!filterState) {
+    //     parent.classList.add("active-icon");
+    //     for(let i = 0; i < todoItems.length; i++) {
+    //         let itemMode = todoItems[i].children[0].classList[1];
+    //         if(selectedFilter == itemMode) {
+    //             todoItems[i].style.display = "block";
+    //         } else {
+    //             todoItems[i].style.display = "none";
+    //         } 
+    //     }
+    // } else {
+    //     parent.classList.remove("active-icon");
+    //     for(let i = 0; i < todoItems.length; i++) {
+    //         todoItems[i].style.display = "block";
+    //     }
+    // }
+
+    filterObject.isFilter = !filterObject.isFilter;
+}
 
 function createModal(e) {
     let existingModal = document.querySelector(".modal-container");
@@ -130,7 +208,6 @@ function createTask(todoItem, currentSelectedMode, taskId, fromUI) {
     let taskDescription = taskContainer.querySelector(".task-description");
     taskDescription.addEventListener("keyup", editTaskDescription);
     let toggleDescriptonButtons = taskContainer.querySelectorAll(".fas");
-    console.log(toggleDescriptonButtons);
     for(let i = 0; i < toggleDescriptonButtons.length; i++) {
         toggleDescriptonButtons[i].addEventListener("click", toggleLock);
     }
