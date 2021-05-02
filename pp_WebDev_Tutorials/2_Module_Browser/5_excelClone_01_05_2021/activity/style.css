@@ -21,6 +21,68 @@ body {
 /* grid container */
 .grid-container {
     height: calc(100vh - (7rem + 3rem + 3rem));
+    overflow: auto;
+    position: relative;
+}
+
+.top-row {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    height: 100%;
+    background-color: whitesmoke;
+    min-width: 120px;
+    border: 0.1rem solid rgb(185, 185, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.top-left-block {
+    height: 30px;
+    background-color: lightgray;
+    width: 30px;
+}
+
+.left-col {
+    width: 30px;
+}
+
+.left-col-box {
+    height: 30px;
+    padding-top: 0.2rem;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid rgb(185, 185, 185);
+    font-weight: bold;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.row > .col {
+    height: 30px;
+    background-color: white;
+    border: 0.1rem solid lightgray;
+    font-weight: 400;
 }
 
 /* sheets container */
@@ -33,7 +95,7 @@ body {
 }
 
 .add-sheet {
-    width: 5%;
+    min-width: 4rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -57,15 +119,17 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
-    min-width: 7%;
+    min-width: 6rem;
     height: 100%;
     border-left: 0.0001rem solid lightgray;
     border-right: 0;
     cursor: pointer;
+    ;
 }
 
 .active-sheet {
     background-color: white;
     border-left: 0.1rem solid lightgray;
     border-right: 0.1rem solid lightgray;
+    color: darkgreen;
 }
