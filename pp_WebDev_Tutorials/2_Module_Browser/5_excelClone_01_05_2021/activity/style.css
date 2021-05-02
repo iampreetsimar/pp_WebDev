@@ -56,8 +56,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1.2rem;
-    width: 7%;
+    padding: 0 1rem;
+    min-width: 7%;
     height: 100%;
     border-left: 0.0001rem solid lightgray;
     border-right: 0;

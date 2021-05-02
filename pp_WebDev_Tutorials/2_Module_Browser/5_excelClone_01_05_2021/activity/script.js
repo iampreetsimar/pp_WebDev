@@ -22,6 +22,11 @@ addSheet.addEventListener("click", function() {
 // makes selected sheet as active
 function selectSheet(e) {
     let selectedSheet = e.currentTarget;
+
+    // if selected sheed is already selected
+    if(selectedSheet.classList[1])
+        return;
+    
     let totalSheets = document.querySelectorAll(".sheet");
     totalSheets[currentSheetIdx].classList.remove("active-sheet");
     currentSheetIdx = Number(selectedSheet.getAttribute("sheetIdx"));
