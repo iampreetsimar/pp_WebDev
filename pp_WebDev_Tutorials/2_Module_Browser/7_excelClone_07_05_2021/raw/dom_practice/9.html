@@ -712,6 +712,10 @@
                 document.body.scrollIntoView({ behavior: "smooth" });
             } else if(e.key == "b") {
                 document.body.scrollIntoView({ behavior: "smooth", block: "end" });
+
+                // IMPORTANT
+                // let obj = document.getBoundingClientRect();
+                // window.scrollTo(0, obj.height);
             }
         })
     </script>
