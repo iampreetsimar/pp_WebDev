@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .balls {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .ball {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: none;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <script>
+      // Q Make a loading animation using the above 5 balls and JS
+      let idx = 0;
+      let ballItems = document.querySelectorAll(".ball");
+      setInterval(function() {
+        if(idx == 0) {
+            ballItems[ballItems.length - 1].style.opacity = 1;
+        } else {
+            ballItems[idx - 1].style.opacity = 1;
+        }
+
+        ballItems[idx].style.opacity = 0;
+        idx = (idx + 1) % ballItems.length;
+      }, 100)
+      
+      /*
+          SOLUTION - Using setTimeout and recursion
+          Only recursion won't work. Stack will overflow.
+          To overcome that, setTimeout will be added. It works because function is called in api
+
+          function load(idx) {
+            if(idx == 0) {
+                ballItems[ballItems.length - 1].style.opacity = 1;
+            } else {
+                ballItems[idx - 1].style.opacity = 1;
+            }
+
+            ballItems[idx].style.opacity = 0;
+            idx = (idx + 1) % ballItems.length;
+            setTimeout(() => {
+              load(idx);
+            }, 150);
+          }
+
+          load(0);
+      */
+      
+      
+    </script>
+  </body>
+</html>
