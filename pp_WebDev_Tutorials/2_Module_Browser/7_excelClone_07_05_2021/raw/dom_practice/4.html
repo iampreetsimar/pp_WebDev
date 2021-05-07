@@ -21,9 +21,10 @@
     <script>
       // Q fix the list by making it go from 1 to 10. Use only querySelectorAll, createElement and insertBefore
       let list = document.querySelectorAll("li");
+      let parent = document.querySelector("ul");
       let li = document.createElement("li");
       li.innerText = "7";
-      list[5].append(li);
+      parent.insertBefore(li, list[6]);
     </script>
   </body>
 </html>

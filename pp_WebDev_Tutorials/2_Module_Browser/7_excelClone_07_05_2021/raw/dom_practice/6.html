@@ -55,8 +55,10 @@
         Array.from(cards).forEach(function(card) {
             card.addEventListener("dblclick", function() {
                 let color = card.getAttribute("data-color");
-                card.classList.add(color);
-                card.setAttribute("data-color", "used");
+                if(color != "used") {
+                  card.classList.add(color);
+                  card.setAttribute("data-color", "used");
+                }
             })
         })
      
