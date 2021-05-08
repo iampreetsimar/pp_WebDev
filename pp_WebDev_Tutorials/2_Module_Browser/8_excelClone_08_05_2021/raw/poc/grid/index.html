@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .grid-container {
+            position: relative;
+        }
+
+        .top-row {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 30px;
+        }
+
+        .row {
+            display: flex;
+        }
+        
+        .col {
+            height: 100%;
+            background-color: green;
+            min-width: 120px;
+            border: 0.1rem solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-left-block {
+            height: 30px;
+            background-color: grey;
+            width: 30px;
+        }
+
+        .left-col {
+            width: 30px;
+        }
+
+        .left-col-box {
+            height: 30px;
+            padding-top: 0.2rem;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.1rem solid black;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .row > .col {
+            height: 30px;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="top-left-block"></div>
+        <div class="top-row"></div>
+        <div class="left-col"></div>
+        <div class="grid"></div>
+        <script>
+            let topRow = document.querySelector(".top-row");
+            let str = "";
+            for(let i = 0; i < 26; i++) {
+                str += `<div class="col">${String.fromCharCode(65 + i)}</div>`;
+            }
+            topRow.innerHTML += str;
+
+            let leftCol = document.querySelector(".left-col");
+            str = "";
+            for(let i = 0; i < 100; i++) {
+                str += `<div class="left-col-box">${i + 1}</div>`;
+            }
+
+            leftCol.innerHTML = str;
+
+
+            // 2D grid
+            let grid = document.querySelector(".grid");
+            str = "";
+            for(let i = 0; i < 100; i++) {
+                str += `<div class="row">`;
+                for(let j = 0; j < 26; j++) {
+                    str += `<div class="col">${String.fromCharCode(65 + j)}${i + 1}</div>`;
+                }
+                str += `</div>`;
+            }
+
+            grid.innerHTML = str;
+        </script>
+    </div>
+</body>
+</html>

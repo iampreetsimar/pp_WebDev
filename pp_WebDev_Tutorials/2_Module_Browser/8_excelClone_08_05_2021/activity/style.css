@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ************************************************************ */
+/* menu container */
+.menu-container {
+    height: 7rem;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.1rem solid lightgrey;
+}
+
+.menu-container > * {
+    height: 80%;
+    width: 20%;
+    border-right: 0.15rem solid lightgray;
+}
+
+.formatting-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.subgroup {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.subgroup > * {
+    width: 100%;
+}
+
+.font-formatting-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-formatting-container > * {
+    width: 30%;
+}
+
+.color-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-container > * {
+    width: 45%;
+}
+
+.alignment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alignment-container > * {
+    width: 20%;
+    font-weight: bold;
+}
+
+.alignment-container > *:hover {
+    color: darkgreen;
+}
+
+/* ************************************************************ */
+/* formula container */
+.formula-container {
+    height: 3rem;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formula-container > * {
+    height: 60%;
+}
+
+.address-box {
+    width: 10%; 
+    outline: none;
+    padding-left: 0.5rem;
+    font-weight: bold;
+}
+
+.separator {
+    width: 2%;
+    text-align: center;
+    padding: 0.3rem 0;
+}
+
+.formula-box {
+    width: 87%;
+    outline: none;
+}
+
+/* ************************************************************ */
+/* grid container */
+.grid-container {
+    height: calc(100vh - (7rem + 3rem + 3rem));
+    overflow: auto;
+    position: relative;
+}
+
+.top-row {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.row {
+    display: flex;
+    min-height: 30px;
+}
+
+.col {
+    /* height: 100%; */
+    background-color: whitesmoke;
+    min-width: 120px;
+    max-width: 120px;
+    border: 0.1rem solid rgb(185, 185, 185);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* font-weight: bold; */
+}
+
+.top-row > .col {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.top-left-block {
+    height: 30px;
+    background-color: lightgray;
+    width: 30px;
+}
+
+.left-col {
+    width: 30px;
+}
+
+.left-col-box {
+    height: 30px;
+    padding-top: 0.2rem;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid rgb(185, 185, 185);
+    font-weight: bold;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.row > .col {
+    min-height: 30px;
+    background-color: white;
+    border: 0.1rem solid lightgray;
+    padding: 0.25rem 0;
+}
+
+.row > .col[contenteditable]:focus {
+    outline: 0.15rem solid darkgreen;
+    outline-offset: -2px;
+}
+
+/* ************************************************************ */
+/* sheets container */
+.sheets-container {
+    width: 100%;
+    height: 3rem;
+    background-color:whitesmoke;
+    display: flex;  
+    text-align: center;
+}
+
+.add-sheet {
+    min-width: 4rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas {
+    font-size: 1.2rem;
+    color: rgb(46, 44, 44);
+    cursor: pointer;
+}
+
+.fas:hover {
+    color: darkgreen;
+}
+
+.sheet-list {
+    display: flex;
+    width: 97%;
+    overflow: auto;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.sheet-list::-webkit-scrollbar {
+    display: none;
+}
+
+.sheet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    min-width: 6rem;
+    height: 100%;
+    border-left: 0.0001rem solid lightgray;
+    border-right: 0;
+    cursor: pointer;
+}
+
+.active-sheet {
+    background-color: white;
+    border-left: 0.225rem solid lightgray;
+    border-right: 0.15rem solid lightgray;
+    color: darkgreen;
+    font-weight: bold;
+}
