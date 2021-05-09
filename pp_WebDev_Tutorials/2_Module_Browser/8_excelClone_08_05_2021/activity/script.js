@@ -10,7 +10,9 @@ let staticTopRow = document.querySelector(".top-row");
 let boldButton = document.querySelector(".bold");
 let underlineButton = document.querySelector(".underline");
 let italicButton = document.querySelector(".italic");
+let colorContainer = document.querySelector(".color-container");
 let currentSheetIdx = 0;
+let sheetDB = workBookDB[0];
 
 // default sheet - event listener to make it active on load
 sheetlist.children[0].addEventListener("click", selectSheet);
@@ -27,6 +29,23 @@ addSheet.addEventListener("click", function() {
     currentSheetIdx = lastIdx;
     newSheet.addEventListener("click", selectSheet);
     sheetlist.append(newSheet);
+
+    // on creating new sheet, clear the UI
+    initializeNewSheetDB();
+    for(let i = 0; i < allCells.length; i++) {
+        allCells[i].style.fontFamily = "Arial";
+        allCells[i].style.fontSize = "0.9rem";
+        allCells[i].style.fontWeight = "initial";
+        allCells[i].style.fontStyle = "initial";
+        allCells[i].style.textDecoration = "none";
+        allCells[i].style.textAlign = "left";
+        allCells[i].innerText = "";
+        allCells[i].style.color = "black";
+        allCells[i].style.backgroundColor = "white";
+    }
+
+    // updating sheetDB to currentSheetIdx
+    sheetDB = workBookDB[currentSheetIdx];
 });
 
 // makes selected sheet as active
@@ -94,6 +113,11 @@ function handleCell(e) {
 
     // handle font-size
     fontSizeButton.value = cellObject.fontSize;
+
+    // handle fontColor and fill color
+    colorContainer.children[0].value = cellObject.fontColor;
+    colorContainer.children[1].value = cellObject.bgColor;
+
 }
 
 // select static top row and left column
@@ -271,6 +295,24 @@ underlineButton.addEventListener("click", function() {
     }
 
     curCell.focus();
+})
+
+// event listener for color container
+colorContainer.addEventListener("change", function(e) {
+    let selectedCellAddress = cellAddress.value; 
+    let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
+    let curCell = document.querySelector(`.col[rowId="${rowId}"][colId="${colId}"]`);
+
+    // cell object from sheetDB
+    let cellObject = sheetDB[rowId][colId];
+
+    if(e.target == colorContainer.children[0]) {
+        curCell.style.color = colorContainer.children[0].value;
+        cellObject.fontColor = colorContainer.children[0].value;
+    } else if(e.target == colorContainer.children[1]) {
+        curCell.style.backgroundColor = colorContainer.children[0].value;
+        cellObject.bgColor = colorContainer.children[0].value;
+    }
 })
 
 allCells[0].click();

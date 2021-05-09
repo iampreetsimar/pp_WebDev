@@ -49,6 +49,8 @@ body {
 
 .font-formatting-container > * {
     width: 30%;
+    text-align: center;
+    padding: 0.3rem 0;
 }
 
 .font-formatting-container > *:hover {
@@ -98,39 +100,54 @@ body {
 /* ************************************************************ */
 /* formula container */
 .formula-container {
-    height: 3rem;
-    background-color: whitesmoke;
+    height: 2rem;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    border-bottom: 0.1rem solid lightgray;
 }
 
 .formula-container > * {
-    height: 60%;
+    height: 70%;
 }
 
 .address-box {
-    width: 10%; 
+    width: 7%; 
     outline: none;
     padding-left: 0.5rem;
     font-weight: bold;
+    border: none;
+}
+
+.address-box:focus {
+    outline: 0.15rem solid darkgreen;
+    outline-offset: -2px;
 }
 
 .separator {
-    width: 2%;
+    width: 4%;
     text-align: center;
-    padding: 0.3rem 0;
+    padding: 0 0.2rem;
+    border-left: 0.15rem solid lightgray;
+    border-right: 0.15rem solid lightgray;
+    color: rgb(143, 142, 142);
+    font-style: italic;
+    font-size: 1rem;
+    font-family: cursive;
 }
 
 .formula-box {
     width: 87%;
     outline: none;
+    border: none;
+    
 }
 
 /* ************************************************************ */
 /* grid container */
 .grid-container {
-    height: calc(100vh - (7rem + 3rem + 3rem));
+    height: calc(100vh - (7rem + 2rem + 3rem));
     overflow: auto;
     position: relative;
 }
@@ -180,14 +197,9 @@ body {
     width: 30px;
 }
 
-.left-col > .active, .top-row > .active {
-    background-color: #b8debe;
-    color: darkgreen;
-}
-
 .left-col-box {
-    height: 30px;
-    padding-top: 0.2rem;
+    min-height: 30px;
+    padding: 0.5rem 0;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
@@ -209,12 +221,17 @@ body {
     min-height: 30px;
     background-color: white;
     border: 0.1rem solid lightgray;
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
 }
 
 .row > .col[contenteditable]:focus {
     outline: 0.15rem solid darkgreen;
     outline-offset: -2px;
+}
+
+.left-col > .active, .top-row > .active {
+    background-color: #b8debe;
+    color: darkgreen;
 }
 
 /* ************************************************************ */
@@ -225,6 +242,7 @@ body {
     background-color:whitesmoke;
     display: flex;  
     text-align: center;
+    border-top: 0.1rem solid lightgray;
 }
 
 .add-sheet {

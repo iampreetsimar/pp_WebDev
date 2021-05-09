@@ -30,22 +30,32 @@ grid.innerHTML = str;
 
 
 // ************************************
-// DB to store sheet formatting details in a 2D array
-// To keep track of formatting details
+// DB to store sheet formatting details in a 3D array
+// To keep track of formatting details and text
+// Along different worksheets
+// 2D array of sheetDB represents a single sheet
 
-let sheetDB = [];
-for(let i = 0; i < 100; i++) {
-    let row = [];
-    for(let j = 0; j < 26; j++) {
-        let cell = {
-            bold: false,
-            italic: false,
-            underline: false,
-            fontFamily: "Arial",
-            fontSize: "0.9",
-            horizontalAlignment: "none",
+let workBookDB = [];
+function initializeNewSheetDB() {
+    let sheetDB = [];
+    for(let i = 0; i < 100; i++) {
+        let row = [];
+        for(let j = 0; j < 26; j++) {
+            let cell = {
+                bold: false,
+                italic: false,
+                underline: false,
+                fontFamily: "Arial",
+                fontSize: "0.9",
+                horizontalAlignment: "none",
+                fontColor: "#000000",
+                bgColor: "#FFFFFF"
+            }
+            row.push(cell);
         }
-        row.push(cell);
+        sheetDB.push(row);
     }
-    sheetDB.push(row);
+    workBookDB.push(sheetDB);
 }
+
+initializeNewSheetDB();
