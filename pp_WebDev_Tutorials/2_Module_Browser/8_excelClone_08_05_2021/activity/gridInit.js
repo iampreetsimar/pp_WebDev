@@ -26,3 +26,26 @@ for(let i = 0; i < 100; i++) {
 }
 
 grid.innerHTML = str;
+
+
+
+// ************************************
+// DB to store sheet formatting details in a 2D array
+// To keep track of formatting details
+
+let sheetDB = [];
+for(let i = 0; i < 100; i++) {
+    let row = [];
+    for(let j = 0; j < 26; j++) {
+        let cell = {
+            bold: false,
+            italic: false,
+            underline: false,
+            fontFamily: "Arial",
+            fontSize: "0.9",
+            horizontalAlignment: "none",
+        }
+        row.push(cell);
+    }
+    sheetDB.push(row);
+}
