@@ -32,21 +32,28 @@ addSheet.addEventListener("click", function() {
 
     // on creating new sheet, clear the UI
     initializeNewSheetDB();
-    for(let i = 0; i < allCells.length; i++) {
-        allCells[i].style.fontFamily = "Arial";
-        allCells[i].style.fontSize = "0.9rem";
-        allCells[i].style.fontWeight = "initial";
-        allCells[i].style.fontStyle = "initial";
-        allCells[i].style.textDecoration = "none";
-        allCells[i].style.textAlign = "left";
-        allCells[i].innerText = "";
-        allCells[i].style.color = "black";
-        allCells[i].style.backgroundColor = "white";
-    }
+    initializeNewSheetUI();
 
     // updating sheetDB to currentSheetIdx
     sheetDB = workBookDB[currentSheetIdx];
+    allCells[0].click();
+    allCells[0].focus();
 });
+
+// initialize UI for new sheet
+function initializeNewSheetUI() {
+    Array.from(allCells).forEach(function(cell) {
+        cell.style.fontSize = "0.9rem";
+        cell.style.fontFamily = "Arial";
+        cell.style.fontStyle = "normal";
+        cell.style.fontWeight = "normal";
+        cell.style.textDecoration = "none";
+        cell.style.textAlign = "left";
+        cell.innerText = "";
+        cell.style.color = "#000000";
+        cell.style.backgroundColor = "#FFFFFF";
+    })
+}
 
 // makes selected sheet as active
 function selectSheet(e) {
@@ -60,6 +67,39 @@ function selectSheet(e) {
     totalSheets[currentSheetIdx].classList.remove("active-sheet");
     currentSheetIdx = Number(selectedSheet.getAttribute("sheetIdx"));
     selectedSheet.classList.add("active-sheet");
+
+    // update sheetDB and first cell should be selected on switch
+    sheetDB = workBookDB[currentSheetIdx];
+    setUIFromSheetDB(sheetDB);
+    allCells[0].click();
+    allCells[0].focus();
+}
+
+function setUIFromSheetDB(sheetDB) {
+    for(let i = 0; i < sheetDB.length; i++) {
+        for(let j = 0; j < sheetDB[i].length; j++) {
+            let curCell = document.querySelector(`.col[rowId="${i}"][colId="${j}"]`);
+            let { fontFamily, 
+                fontSize, 
+                bold, 
+                italic, 
+                underline, 
+                horizontalAlignment, 
+                fontColor, 
+                bgColor, 
+                value } = sheetDB[i][j];
+
+            curCell.style.fontFamily = fontFamily;
+            curCell.style.fontSize = fontSize + "rem";
+            curCell.style.fontWeight = bold ? "bold" : "normal";
+            curCell.style.fontStyle = italic ? "italic" : "normal";
+            curCell.style.textDecoration = underline ? "underline" : "none";
+            curCell.style.textAlign = (horizontalAlignment == "none") ? "left" : horizontalAlignment;
+            curCell.innerText = value;
+            curCell.style.color = fontColor;
+            curCell.style.backgroundColor = bgColor;
+        }
+    }
 }
 
 // add event listener on cells
@@ -118,6 +158,9 @@ function handleCell(e) {
     colorContainer.children[0].value = cellObject.fontColor;
     colorContainer.children[1].value = cellObject.bgColor;
 
+    // handle cell content
+    let curCell = document.querySelector(`.col[rowId="${rowId - 1}"][colId="${colId}"]`);
+    curCell.innerText = cellObject.value;
 }
 
 // select static top row and left column
@@ -239,7 +282,7 @@ boldButton.addEventListener("click", function() {
     let cellObject = sheetDB[rowId][colId];
 
     if(isActive) {
-        curCell.style.fontWeight = "initial";
+        curCell.style.fontWeight = "normal";
         boldButton.classList.remove("active");
         cellObject.bold = false;
     } else {
@@ -262,7 +305,7 @@ italicButton.addEventListener("click", function() {
     let cellObject = sheetDB[rowId][colId];
 
     if(isActive) {
-        curCell.style.fontStyle = "initial";
+        curCell.style.fontStyle = "normal";
         italicButton.classList.remove("active");
         cellObject.italic = false;
     } else {
@@ -285,7 +328,7 @@ underlineButton.addEventListener("click", function() {
     let cellObject = sheetDB[rowId][colId];
 
     if(isActive) {
-        curCell.style.textDecoration = "initial";
+        curCell.style.textDecoration = "none";
         underlineButton.classList.remove("active");
         cellObject.underline = false;
     } else {
@@ -310,10 +353,27 @@ colorContainer.addEventListener("change", function(e) {
         curCell.style.color = colorContainer.children[0].value;
         cellObject.fontColor = colorContainer.children[0].value;
     } else if(e.target == colorContainer.children[1]) {
-        curCell.style.backgroundColor = colorContainer.children[0].value;
-        cellObject.bgColor = colorContainer.children[0].value;
+        curCell.style.backgroundColor = colorContainer.children[1].value;
+        cellObject.bgColor = colorContainer.children[1].value;
     }
+
+    curCell.focus();
 })
+
+// event listener for cell content
+Array.from(allCells).forEach(function(cell) {
+    cell.addEventListener("blur", handleCellContent);
+});
+
+function handleCellContent() {
+    let selectedCellAddress = cellAddress.value; 
+    let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
+    let curCell = document.querySelector(`.col[rowId="${rowId}"][colId="${colId}"]`);
+
+    // cell object from sheetDB
+    let cellObject = sheetDB[rowId][colId];
+    cellObject.value = curCell.innerText;
+}
 
 allCells[0].click();
 allCells[0].focus();

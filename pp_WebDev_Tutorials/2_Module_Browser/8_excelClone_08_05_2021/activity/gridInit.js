@@ -49,7 +49,8 @@ function initializeNewSheetDB() {
                 fontSize: "0.9",
                 horizontalAlignment: "none",
                 fontColor: "#000000",
-                bgColor: "#FFFFFF"
+                bgColor: "#FFFFFF",
+                value: ""
             }
             row.push(cell);
         }
