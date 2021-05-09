@@ -107,6 +107,8 @@ Array.from(allCells).forEach(function(item) {
     item.addEventListener("click", handleCell);
 });
 
+// updates address bar on cell selection
+//  
 function handleCell(e) {
     if(cellAddress.value)
         unselectPreviousTopRowLeftCol();
@@ -158,9 +160,10 @@ function handleCell(e) {
     colorContainer.children[0].value = cellObject.fontColor;
     colorContainer.children[1].value = cellObject.bgColor;
 
-    // handle cell content
-    let curCell = document.querySelector(`.col[rowId="${rowId - 1}"][colId="${colId}"]`);
-    curCell.innerText = cellObject.value;
+    // handle cell content - no need
+    // already handled in setUIFromSheetDB()
+    // let curCell = document.querySelector(`.col[rowId="${rowId - 1}"][colId="${colId}"]`);
+    // curCell.innerText = cellObject.value;
 }
 
 // select static top row and left column
@@ -208,6 +211,7 @@ alignButton.addEventListener("click", function(e) {
     }
 });
 
+// handles selection of alignment button
 function handleAlignmentActiveClass(alignment) {
     if(alignment == "left") {
         alignButton.children[1].classList.remove("active");
@@ -365,6 +369,7 @@ Array.from(allCells).forEach(function(cell) {
     cell.addEventListener("blur", handleCellContent);
 });
 
+// updates sheetDB value property from cell content
 function handleCellContent() {
     let selectedCellAddress = cellAddress.value; 
     let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
