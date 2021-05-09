@@ -54,7 +54,7 @@ body {
 }
 
 .font-formatting-container > *:hover {
-    background-color: #b8debe;
+    background-color: #dcdddd;
     color: darkgreen;
 }
 
@@ -73,6 +73,16 @@ body {
     width: 45%;
 }
 
+.color-container > *:hover {
+    background-color: #dcdddd;
+    color: darkgreen;
+}
+
+.color-container > *:focus {
+    background-color: #b8debe;
+    color: darkgreen;
+}
+
 .alignment-container {
     display: flex;
     align-items: center;
@@ -89,7 +99,7 @@ body {
 
 .alignment-container > *:hover {
     color: darkgreen;
-    background-color: #b8debe;
+    background-color: #dcdddd;
 }
 
 .alignment-container > .active {
@@ -118,6 +128,11 @@ body {
     padding-left: 0.5rem;
     font-weight: bold;
     border: none;
+}
+
+.address-box:hover {
+    background-color: #dcdddd;
+    color: darkgreen;
 }
 
 .address-box:focus {
