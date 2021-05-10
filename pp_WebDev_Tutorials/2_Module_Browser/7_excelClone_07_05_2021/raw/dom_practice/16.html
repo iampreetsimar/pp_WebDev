@@ -16,7 +16,18 @@
     </ul>
     <script>
       // Q Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
+      let ul = document.querySelector("ul");
+      // ul.addEventListener("click", function(e) {
+      //   let li = e.target.parentNode;
+      //   li.remove();
+      // })
 
+      ul.addEventListener("click", function(e) {
+        if(e.target.getAttribute("href")) {
+          li = e.target.parentNode;
+          li.remove();
+        }
+      })
     
     </script>
   </body>

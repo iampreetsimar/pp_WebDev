@@ -15,8 +15,30 @@
     </p>
     <script>
       // Q Write a generic function to get elements by given attribute. Using that function select the above p tag and console.log(); it
-
+      function getElementByAttribute(attr) {
+        let el = document.querySelector(attr);
+        console.log(el.textContent);
+      }
      
+      getElementByAttribute("p[data-test='abc']")
+
+      /*
+        Solution:
+          function getElementsByAttribute(attribute) {
+            let allElements = document.getElementsByTagName("*"),
+              elm,
+              found = [];
+            for (let i = 0; i < allElements.length; i++) {
+              elm = allElements[i];
+              if (elm.getAttribute(attribute)) {
+                found.push(elm);
+              }
+            }
+            return found;
+          }
+
+          console.log(getElementsByAttribute("data-test"))
+      */
     </script>
   </body>
 </html>
