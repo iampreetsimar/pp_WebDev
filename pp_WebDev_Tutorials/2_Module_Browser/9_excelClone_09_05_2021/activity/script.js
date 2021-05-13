@@ -370,7 +370,16 @@ colorContainer.addEventListener("change", function(e) {
 // event listener for cell content
 Array.from(allCells).forEach(function(cell) {
     cell.addEventListener("blur", handleCellContent);
+    cell.addEventListener("keyup", handleTabs);
 });
+
+// on keyup of tab on cell, click on the active cell
+// this handles all the cases for cell content
+function handleTabs(e) {
+    if(e.key == "Tab") {
+        e.currentTarget.click();
+    }
+}
 
 // updates sheetDB value property from cell content
 function handleCellContent() {
@@ -380,6 +389,16 @@ function handleCellContent() {
 
     // cell object from sheetDB
     let cellObject = sheetDB[rowId][colId];
+
+    if(cellObject.value == curCell.innerText)
+        return;
+
+    if(cellObject.formula) {
+        // if cell has a corresponding formula
+        // and we've overwritten the cell content
+        removeFormulaFromParentAndItself(cellObject, selectedCellAddress);
+    }
+
     cellObject.value = curCell.innerText;
 
     // update children of cellObject
@@ -397,7 +416,21 @@ formulaInput.addEventListener("keydown", function(e) {
         // get current cell from address bar
         let selectedCellAddress = cellAddress.value; 
         let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
+
+        // if formula is already present in sheetDB
+        // and is not equal to the current formula
+        // remove formula from parent and itself first
+        let cellObject = sheetDB[rowId][colId];
         let curCell = document.querySelector(`.col[rowId="${rowId}"][colId="${colId}"]`);
+
+        if(cellObject.formula == formula) {
+            curCell.focus();
+            return;
+        }
+
+        if(cellObject.formula && cellObject.formula != formula) {
+            removeFormulaFromParentAndItself(cellObject, selectedCellAddress);
+        } 
 
         // evaluate formula
         let evaluatedValue = evaluateFormula(formula);
@@ -407,6 +440,7 @@ formulaInput.addEventListener("keydown", function(e) {
         
         // update DB -> set content in DB (val, formula)
         setCellContentInDB(evaluatedValue, formula, rowId, colId, selectedCellAddress, false);
+        updateChildren(cellObject);
         curCell.focus();
     }
 })
@@ -464,7 +498,6 @@ function setCellContentInDB(value, formula, rowId, colId, curCellAddress, fromUp
             parentObject.children.push(curCellAddress);
         }
     });
-
 }
 
 // updates cell content in UI and DB for children recursively
@@ -479,7 +512,24 @@ function updateChildren(cellObject) {
     })
 }
 
+function removeFormulaFromParentAndItself(cellObject, childAddress) {
+    let formula = cellObject.formula;
 
+    // update parent's children and remove child
+    let tokens = formula.split(" ");
+    tokens.forEach(function(token) {
+        let char = token.charCodeAt(0);
+        if(char >= 65 && char <= 90) {
+            let parentIds = getRowColIdFromAddress(token);
+            let parentObject = sheetDB[parentIds.rowId][parentIds.colId];
+            let chidIdx = parentObject.children.indexOf(childAddress);
+            parentObject.children.splice(chidIdx, 1);
+        }
+    });
+
+    // remove formula from child itself
+    cellObject.formula = "";
+}
 
 allCells[0].click();
 allCells[0].focus();
