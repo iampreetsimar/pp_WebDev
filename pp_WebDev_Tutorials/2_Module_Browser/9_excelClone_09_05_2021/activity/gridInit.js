@@ -50,7 +50,9 @@ function initializeNewSheetDB() {
                 horizontalAlignment: "none",
                 fontColor: "#000000",
                 bgColor: "#FFFFFF",
-                value: ""
+                value: "",
+                children: [],
+                formula: ""
             }
             row.push(cell);
         }

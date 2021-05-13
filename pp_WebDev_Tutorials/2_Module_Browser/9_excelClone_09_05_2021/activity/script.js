@@ -11,6 +11,7 @@ let boldButton = document.querySelector(".bold");
 let underlineButton = document.querySelector(".underline");
 let italicButton = document.querySelector(".italic");
 let colorContainer = document.querySelector(".color-container");
+let formulaInput = document.querySelector(".formula-box");
 let currentSheetIdx = 0;
 let sheetDB = workBookDB[0];
 
@@ -108,7 +109,6 @@ Array.from(allCells).forEach(function(item) {
 });
 
 // updates address bar on cell selection
-//  
 function handleCell(e) {
     if(cellAddress.value)
         unselectPreviousTopRowLeftCol();
@@ -164,6 +164,9 @@ function handleCell(e) {
     // already handled in setUIFromSheetDB()
     // let curCell = document.querySelector(`.col[rowId="${rowId - 1}"][colId="${colId}"]`);
     // curCell.innerText = cellObject.value;
+
+    // handle formula bar
+    formulaInput.value = cellObject.formula;
 }
 
 // select static top row and left column
@@ -378,10 +381,105 @@ function handleCellContent() {
     // cell object from sheetDB
     let cellObject = sheetDB[rowId][colId];
     cellObject.value = curCell.innerText;
+
+    // update children of cellObject
+    updateChildren(cellObject);
 }
+
+// **************** IMPELEMENATATION FOR FORMULA BAR ********************
+
+// event listener on formula bar
+formulaInput.addEventListener("keydown", function(e) {
+    // if formula is not empty and enter is pressed
+    if(e.key == "Enter" && formulaInput.value) {
+        let formula = formulaInput.value;
+
+        // get current cell from address bar
+        let selectedCellAddress = cellAddress.value; 
+        let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
+        let curCell = document.querySelector(`.col[rowId="${rowId}"][colId="${colId}"]`);
+
+        // evaluate formula
+        let evaluatedValue = evaluateFormula(formula);
+
+        // set UI for the change
+        curCell.innerText = evaluatedValue;
+        
+        // update DB -> set content in DB (val, formula)
+        setCellContentInDB(evaluatedValue, formula, rowId, colId, selectedCellAddress, false);
+        curCell.focus();
+    }
+})
+
+// updates UI for the cell
+function setCellContentInUI(rowId, colId, evaluatedValue) {
+    document.querySelector(`.col[rowId="${rowId}"][colId="${colId}"]`).innerText = evaluatedValue;
+}
+
+// evaluates the formula and returns evaluated value
+function evaluateFormula(formula) {
+    // eg: ( 2 * A1 )
+    // split - [(, 2, *, A1, )]
+    // DB -> get value of A1
+    // replace - [(, 2, *, 10, )]
+    // (2 * 10)
+    // get result from it
+    // return 20 (use of eval function or we can use infix evaluation)
+    // usage of eval function is not good as any script can be run through it
+
+    let tokens = formula.split(" ");
+    tokens.forEach(function(token) {
+        let char = token.charCodeAt(0);
+        if(char >= 65 && char <= 90) {
+            let { rowId, colId } = getRowColIdFromAddress(token);
+            let cellObject = sheetDB[rowId][colId];
+            let { value } = cellObject;
+            formula = formula.replace(token, value);
+        }
+    });
+
+    // need to use infix evaluation
+    let evaledRes = eval(formula);
+    return evaledRes;
+}
+
+// updates cell details in DB along with the children
+function setCellContentInDB(value, formula, rowId, colId, curCellAddress, fromUpdateChildren) {
+    // updated value in cell object from sheetDB
+    let cellObject = sheetDB[rowId][colId];
+    cellObject.value = value;
+    cellObject.formula = formula;
+
+    // flag to check if from update children -> return from this point
+    if(fromUpdateChildren)
+        return;
+
+    // update parent's children
+    let tokens = formula.split(" ");
+    tokens.forEach(function(token) {
+        let char = token.charCodeAt(0);
+        if(char >= 65 && char <= 90) {
+            let parentIds = getRowColIdFromAddress(token);
+            let parentObject = sheetDB[parentIds.rowId][parentIds.colId];
+            parentObject.children.push(curCellAddress);
+        }
+    });
+
+}
+
+// updates cell content in UI and DB for children recursively
+function updateChildren(cellObject) {
+    cellObject.children.forEach(function(child) { 
+        let childIdx = getRowColIdFromAddress(child);
+        let childObj = sheetDB[childIdx.rowId][childIdx.colId];
+        let updatedEvaledVal = evaluateFormula(childObj.formula);
+        setCellContentInUI(childIdx.rowId, childIdx.colId, updatedEvaledVal);
+        setCellContentInDB(updatedEvaledVal, childObj.formula, childIdx.rowId, childIdx.colId, child, true);
+        updateChildren(childObj);
+    })
+}
+
+
 
 allCells[0].click();
 allCells[0].focus();
-
-
-
