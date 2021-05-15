@@ -12,6 +12,8 @@ let underlineButton = document.querySelector(".underline");
 let italicButton = document.querySelector(".italic");
 let colorContainer = document.querySelector(".color-container");
 let formulaInput = document.querySelector(".formula-box");
+let gridContainer = document.querySelector(".grid-container");
+let topLeftBlock = document.querySelector(".top-left-block");
 let currentSheetIdx = 0;
 let sheetDB = workBookDB[0];
 
@@ -106,6 +108,16 @@ function setUIFromSheetDB(sheetDB) {
 // add event listener on cells
 Array.from(allCells).forEach(function(item) {
     item.addEventListener("click", handleCell);
+
+    // event listener to keep track of cell height
+    item.addEventListener("keyup", function() {
+        let cellBoundaryObject = item.getBoundingClientRect();
+        let curCellHeight = cellBoundaryObject.height;
+        let selectedCellAddress = cellAddress.value; 
+        let { rowId, colId } = getRowColIdFromAddress(selectedCellAddress);
+        let leftStaticCol = document.querySelectorAll(".left-col .left-col-box")[rowId];
+        leftStaticCol.style.height = curCellHeight + "px";
+    })
 });
 
 // updates address bar on cell selection
@@ -428,6 +440,11 @@ formulaInput.addEventListener("keydown", function(e) {
             return;
         }
 
+        // to detect cycle dependency using graph, if exists in formula -> show an alert
+        // NEED TO IMPLEMENT THIS!!!!!
+        // if(isCyclePresent())
+        //     return;
+
         if(cellObject.formula && cellObject.formula != formula) {
             removeFormulaFromParentAndItself(cellObject, selectedCellAddress);
         } 
@@ -530,6 +547,21 @@ function removeFormulaFromParentAndItself(cellObject, childAddress) {
     // remove formula from child itself
     cellObject.formula = "";
 }
+
+
+// **************** IMPELEMENATATION FOR TOP STATIC ROW AND LEFT STATIC COL SCROLL ********************
+
+// event listener to change top and left position of static row and col on grid scroll
+gridContainer.addEventListener("scroll", function() {
+    let gridTop = gridContainer.scrollTop;
+    let gridLeft = gridContainer.scrollLeft;
+
+    topLeftBlock.style.top = gridTop + "px";
+    topRow.style.top = gridTop + "px";
+
+    leftCol.style.left = gridLeft + "px";
+    topLeftBlock.style.left = gridLeft + "px";
+})
 
 allCells[0].click();
 allCells[0].focus();
