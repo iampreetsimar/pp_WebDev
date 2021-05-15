@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open a File</title>
+</head>
+<body>
+    <input type="file" class="open-file">
+
+    <script>
+        let openFile = document.querySelector(".open-file");
+        openFile.addEventListener("change", function() {
+            // for input type file -> value in files -> returns array of files
+            let files = openFile.files;
+            let currFile = files[0];
+
+            let fr = new FileReader();
+            fr.readAsText(currFile);
+
+            // load function since file can be quite large as well
+            // so, whenever read is finished
+            fr.addEventListener("load", function() {
+                // data is stored in fr.result on readAsText
+                console.log(fr.result);
+            })
+
+
+            // for excel clone, after file is read
+            // parse JSON
+            // store in sheetDB -> current data
+            // render UI
+        })
+
+        // for new file -> initialize workbookDB and UI empty
+    </script>
+</body>
+</html>
