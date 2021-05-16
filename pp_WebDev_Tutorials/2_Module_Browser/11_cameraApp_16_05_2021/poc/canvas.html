@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Canvas Example</h2>
+    <canvas id="canvas-board"></canvas>
+
+    <script>
+        let canvasBoard = document.querySelector("#canvas-board");
+        canvasBoard.height = window.innerHeight - (window.innerHeight/5);
+        canvasBoard.width = window.innerWidth;
+
+        // tool represent pen
+        let tool = canvasBoard.getContext("2d");
+
+        // to draw rectangle - inital x,y -> final x,y
+        // default color - black
+        // to draw rectangle
+        tool.fillRect(0, 0, canvasBoard.width/2, canvasBoard.height/2);
+
+        // to give fill color
+        tool.fillStyle = "slategrey";
+        tool.fillRect(20, 20, canvasBoard.width/2, canvasBoard.height/2);
+        tool.fillStyle = "crimson";
+        tool.fillRect(40, 40, canvasBoard.width/2, canvasBoard.height/2);
+
+        // to give boundary/stroke color
+        tool.strokeStyle = "darkgreen";
+
+        // to give stroke width
+        tool.lineWidth = 5;
+
+        // to draw stroke
+        tool.strokeRect(60, 60, canvasBoard.width/2, canvasBoard.height/2);
+        // canvasBoard.onresize = function () {
+        //     tool.clearRect(0, 0, canvasBoard.width, canvasBoard.height);
+        //     tool.fillRect(0, 0, canvasBoard.width, canvasBoard.height);
+        // }
+    </script>
+</body>
+</html>
