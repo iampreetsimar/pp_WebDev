@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Stream</title>
+</head>
+<body>
+    <video id="video-stream" controls autoplay></video>
+    <audio id="audio-stream" controls autoplay></audio>
+    <script>
+        let videoEl = document.querySelector("#video-stream");
+        let audioEl = document.querySelector("#audio-stream");
+
+        let constraints = { audio: true, video: true };
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function (mediaStream) {
+            videoEl.srcObject = mediaStream;
+            audioEl.srcObject = mediaStream;
+        }).catch(function (err) {   
+            console.log(err);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Recorder</title>
+</head>
+<body>
+    <video autoplay id="video-stream"></video>
+
+    <button id="record-btn">Record Video</button>
+
+    <script>
+        let videoEl = document.querySelector("#video-stream");
+        let recordBtn = document.querySelector("#record-btn");
+        let mediaRecorder;
+        let recordState = false;
+        let chunks = [];
+
+        let constraints = { video: true, audio: true };
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function (mediaStream) {
+            videoEl.srcObject = mediaStream;
+            mediaRecorder = new MediaRecorder(mediaStream);
+
+
+            // these 2 events should work only if stream is available
+
+            // save recording
+            // by adding data from event to chunks
+            mediaRecorder.addEventListener("dataavailable", function (e) {
+                // data
+                chunks.push(e.data);
+            });
+
+            // stop the recording  and download the recording
+            // using download from excel clone
+            mediaRecorder.addEventListener("stop", function () {
+                // type is mime type
+                let blob = new Blob(chunks, { type: "video/mp4" });
+                const url = window.URL.createObjectURL(blob);
+                let a = document.createElement("a");
+                a.href = url;
+                a.download = "file.mp4";
+                a.click();
+
+                // initializing chunks
+                chunks = [];
+            })
+
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+        // event listener to start/stop recording based on flag
+        recordBtn.addEventListener("click", function () {
+            if(!recordState) {
+                mediaRecorder.start();
+                recordBtn.innerText = "Recording. . . ";
+                recordState = true;
+            } else {
+                mediaRecorder.stop();
+                recordBtn.innerText = "Record Video";
+                recordState = false;
+            }
+        })
+    </script>
+</body>
+</html>
