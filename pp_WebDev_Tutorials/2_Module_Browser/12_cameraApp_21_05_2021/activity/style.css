@@ -18,15 +18,19 @@ video {
     width: 100%;
 }
 
-button {
+#record-btn, #capture-btn {
     position: fixed;
     height: 5rem;
     width: 5rem;
     right: 1.5rem;
-    top: 45vh;
+    top: 37vh;
     border-radius: 50%;
     border: none;
     z-index: 90;
+}
+
+#capture-btn {
+    top: 50vh;
 }
 
 button:hover {

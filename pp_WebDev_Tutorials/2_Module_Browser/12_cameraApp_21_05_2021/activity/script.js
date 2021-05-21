@@ -1,5 +1,6 @@
 let videoEl = document.querySelector("#video-stream");
 let recordBtn = document.querySelector("#record-btn");
+let captureBtn = document.querySelector("#capture-btn");
 
 let buffer = [];
 let constraints = { video: true, audio: true };
@@ -39,4 +40,28 @@ recordBtn.addEventListener("click", function () {
         mediaRecorder.stop();
         recordState = false;
     }
+})
+
+captureBtn.addEventListener("click", function () {
+    // create a canvas
+    // set height and width equal to video frame
+    let canvas = document.createElement("canvas");
+    canvas.width = videoEl.videoWidth;
+    canvas.height = videoEl.videoHeight;
+
+    let ctx = canvas.getContext("2d");
+
+    // draw frame on canvas using drawImage
+    ctx.drawImage(videoEl, 0, 0);
+
+    // get link of image from tool
+    let url = canvas.toDataURL();
+
+    // download process
+    let a = document.createElement("a");
+    a.href = url;
+    a.download = "image-capture.png";
+    a.click();
+    a.remove();
+    canvas.remove();
 })
