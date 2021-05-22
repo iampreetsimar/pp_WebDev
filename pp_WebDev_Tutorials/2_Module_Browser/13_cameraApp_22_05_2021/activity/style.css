@@ -16,24 +16,123 @@ body {
 video {
     height: 100%;
     width: 100%;
+
+    /* to flip image horizontally */
+    transform: scaleX(-1);
 }
 
-#record-btn, #capture-btn {
+.parent-btn {
+    height: 4rem;
+    width: 4rem;
+    border: 0.3rem white solid;
     position: fixed;
-    height: 5rem;
-    width: 5rem;
     right: 1.5rem;
     top: 37vh;
     border-radius: 50%;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capture-container {
+    top: 48vh;
+}
+
+.record-btn, .capture-btn {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
     border: none;
+    outline: none;
+    z-index: 90;
+    cursor: pointer;
+}
+
+.record-btn {
+    background-color: crimson;
+}
+
+/* **************** Animation *********** */
+.record-animation {
+    animation: record-stream 1s ease-in infinite;
+}
+
+.capture-animation {
+    animation: record-stream 0.4s ease-in 1;
+}
+
+@keyframes record-stream {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.85);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* **************** Record Time *********** */
+.record-time-container {
+    position: fixed;
+    bottom: 5vh;
+    font-size:xx-large;
+    color: white;
+    left: 2.5rem;
+    display: none;
+    font-family:Arial, Helvetica, sans-serif;
     z-index: 90;
 }
 
-#capture-btn {
-    top: 50vh;
+.timing-active {
+    display: block;
 }
 
-button:hover {
-    background-color: crimson;
+/* **************** Filters *********** */
+.filter-container {
+    position: fixed;
+    top: 18vh;
+    left: 2.5rem;
+    height: 42vh;
+    width: 4rem;
+    z-index: 90;
+}
+
+.filter {
+    background-image: url("https://picsum.photos/id/1062/200/300");
+    background-size: cover;
+    height: 20%;
+    border: 0.1rem solid white;
+    border-bottom: none;
+    cursor: pointer;
+
+    /* mix background-color with background-image */
+    background-blend-mode: color-burn;
+}
+
+div.filter:last-child {
+    border-bottom: 0.1rem solid white;
+}
+
+/* **************** Zoom *********** */
+.zoom-container {
+    position: fixed;
+    top: 20vh;
+    right: 2.5rem;
     color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.zoom-container > * {
+    margin-bottom: 1rem;
+    cursor: pointer;
 }
