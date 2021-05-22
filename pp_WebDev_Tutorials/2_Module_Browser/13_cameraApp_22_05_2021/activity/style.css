@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 80;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+#record-btn, #capture-btn {
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    right: 1.5rem;
+    top: 37vh;
+    border-radius: 50%;
+    border: none;
+    z-index: 90;
+}
+
+#capture-btn {
+    top: 50vh;
+}
+
+button:hover {
+    background-color: crimson;
+    color: white;
+}
