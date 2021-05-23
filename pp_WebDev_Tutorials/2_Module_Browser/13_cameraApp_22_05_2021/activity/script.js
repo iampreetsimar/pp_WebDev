@@ -2,12 +2,15 @@ let videoEl = document.querySelector("#video-stream");
 let recordBtn = document.querySelector("#record-btn");
 let captureBtn = document.querySelector("#capture-btn");
 let recordTime = document.querySelector(".record-time-container");
+let filterContainer = document.querySelector(".filter-container");
+let uiFilter = document.querySelector(".ui-filter");
 
 let buffer = [];
 let constraints = { video: true, audio: true };
 let mediaRecorder;
 let recordState = false;
 let clearTimerObject;
+let selectedFilterColor = "";
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function (mediaStream) {
@@ -79,6 +82,12 @@ captureBtn.addEventListener("click", function () {
     // draw frame on canvas using drawImage
     ctx.drawImage(videoEl, 0, 0);
 
+    // draw filter on top of image
+    if(selectedFilterColor) {
+        ctx.fillStyle = selectedFilterColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
     // get link of image from tool
     let url = canvas.toDataURL();
 
@@ -96,4 +105,18 @@ captureBtn.addEventListener("click", function () {
     }, 400);
 });
 
-
+// add filter to UI
+filterContainer.addEventListener("click", function (e) {
+    if(e.target.classList.contains("filter")) { 
+        let bgColor = e.target.style.backgroundColor;
+        if(bgColor) {
+            uiFilter.classList.add("ui-filter-active");
+            uiFilter.style.backgroundColor = bgColor;
+            selectedFilterColor = bgColor;
+        } else {
+            uiFilter.classList.remove("ui-filter-active");
+            uiFilter.style.backgroundColor = "";
+            selectedFilterColor = "";
+        }
+    }
+})

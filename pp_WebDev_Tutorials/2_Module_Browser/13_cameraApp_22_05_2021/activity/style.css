@@ -118,6 +118,19 @@ div.filter:last-child {
     border-bottom: 0.1rem solid white;
 }
 
+.ui-filter {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 80;
+    display: none;
+    opacity: 0.5;
+}
+
+.ui-filter-active {
+    display: block;
+}
+
 /* **************** Zoom *********** */
 .zoom-container {
     position: fixed;
