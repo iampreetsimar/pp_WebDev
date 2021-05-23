@@ -79,6 +79,10 @@ captureBtn.addEventListener("click", function () {
 
     let ctx = canvas.getContext("2d");
 
+    // flip image horizontally
+    ctx.translate(canvas.width, 0);
+    ctx.scale(-1, 1);
+
     // draw frame on canvas using drawImage
     ctx.drawImage(videoEl, 0, 0);
 
