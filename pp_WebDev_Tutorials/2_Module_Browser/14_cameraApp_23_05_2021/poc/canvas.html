@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .stroke-color {
+            min-width: 10rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stroke-color > * {
+            min-width: 3rem;
+            height: 2rem;
+            border-radius: 10rem;
+            cursor: pointer;
+        }
+
+        .crimson {
+            background-color: crimson;
+        }
+
+        .darkgreen {
+            background-color: darkgreen;
+        }
+
+        .slategrey {
+            background-color: slategrey;
+        }
+
+        .active {
+            border: 0.2rem solid black;
+        }
+
+        #canvas-board {
+            border: 0.1rem solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>Canvas Example</h2>
+        <div class="stroke-color">
+            <div class="stroke crimson"></div>
+            <div class="stroke darkgreen"></div>
+            <div class="stroke slategrey"></div>
+        </div>
+    </div>
+    
+    <canvas id="canvas-board"></canvas>
+
+    <script>
+        let canvasBoard = document.querySelector("#canvas-board");
+        canvasBoard.height = window.innerHeight - (window.innerHeight/8);
+        canvasBoard.width = window.innerWidth;
+
+        let tool = canvasBoard.getContext("2d");
+
+        let menu = document.querySelector(".menu");
+        let strokeButtons = document.querySelector(".stroke-color");
+        strokeButtons.addEventListener("click", function (e) {
+            if(e.target.classList.contains("stroke") && e.target.classList.contains("active")) {
+                e.target.classList.remove("active");
+                tool.strokeStyle = "black"
+            } else if(e.target.classList.contains("stroke") && !e.target.classList.contains("active")) {
+                for(let i = 0; i < strokeButtons.children.length; i++) {
+                    strokeButtons.children[i].classList.remove("active");
+                }
+
+                e.target.classList.add("active");
+                tool.strokeStyle = e.target.classList[1];
+            }
+        })
+
+        // // resize event is on window object
+        // window.addEventListener("resize", function () {
+        //     canvasBoard.height = window.innerHeight - (window.innerHeight/5);
+        //     canvasBoard.width = window.innerWidth;
+        //     // subsequent call on resize event
+        //     drawOnBoard();
+        // });
+
+        // tool represent pen
+        
+        // // initial call on load
+        // drawOnBoard();
+
+        // function drawOnBoard() {
+        //     // to draw rectangle - inital x,y -> final x,y
+        //     // default color - black
+        //     // to draw rectangle
+        //     tool.fillRect(0, 0, canvasBoard.width/2, canvasBoard.height/2);
+
+        //     // to give fill color
+        //     tool.fillStyle = "slategrey";
+        //     tool.fillRect(20, 20, canvasBoard.width/2, canvasBoard.height/2);
+        //     tool.fillStyle = "crimson";
+        //     tool.fillRect(40, 40, canvasBoard.width/2, canvasBoard.height/2);
+
+        //     // to give boundary/stroke color
+        //     tool.strokeStyle = "darkgreen";
+
+        //     // to give stroke width
+        //     tool.lineWidth = 5;
+
+        //     // to draw stroke
+        //     tool.strokeRect(60, 60, canvasBoard.width/2, canvasBoard.height/2);
+        // }
+
+        // to draw on canvas
+        // we'll use mouse events to draw using mouse on UI
+        // tool.beginPath();
+        // tool.moveTo(10, 10);
+        // tool.lineTo(120, 150);
+        // tool.lineTo(120, 300);
+        // tool.moveTo(225, 200);
+        // tool.lineTo(150, 400);
+        // tool.stroke();
+
+        tool.lineWidth = 10;
+        let isMouseDown = false;
+
+        document.body.addEventListener("mousedown", function (e) {
+            let x = e.clientX;
+            let y = getYCoordinate(e.clientY);
+            tool.beginPath();
+            tool.moveTo(x, y);
+            isMouseDown = true;
+        });
+
+        document.body.addEventListener("mousemove", function (e) {
+            let x = e.clientX;
+            let y = getYCoordinate(e.clientY);
+            if(isMouseDown) {
+                tool.lineTo(x, y);
+                tool.stroke();
+            }
+        });
+
+        document.body.addEventListener("mouseup", function () {
+            // let x = e.clientX;
+            // let y = e.clientY;
+            // tool.stroke();
+            isMouseDown = false;
+        });
+
+        // to get the exact cursor position
+        // there was a difference between cursor and actual drawing
+        function getYCoordinate(intitalY) {
+            let menuObj = menu.getBoundingClientRect();
+            return intitalY - menuObj.height;
+        }
+
+    </script>
+</body>
+</html>
