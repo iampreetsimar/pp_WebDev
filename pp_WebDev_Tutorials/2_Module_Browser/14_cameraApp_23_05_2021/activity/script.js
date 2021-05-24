@@ -4,6 +4,7 @@ let captureBtn = document.querySelector("#capture-btn");
 let recordTime = document.querySelector(".record-time-container");
 let filterContainer = document.querySelector(".filter-container");
 let uiFilter = document.querySelector(".ui-filter");
+let zoomContainer = document.querySelector(".zoom-container");
 
 let buffer = [];
 let constraints = { video: true, audio: true };
@@ -11,6 +12,7 @@ let mediaRecorder;
 let recordState = false;
 let clearTimerObject;
 let selectedFilterColor = "";
+let zoomLevel = 1;
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function (mediaStream) {
@@ -79,12 +81,20 @@ captureBtn.addEventListener("click", function () {
 
     let ctx = canvas.getContext("2d");
 
-    // flip image horizontally
-    ctx.translate(canvas.width, 0);
-    ctx.scale(-1, 1);
+    // to flip horizontally 
+    // ctx.translate(canvas.width, canvas.height);
+    // ctx.scale(-1, 1);
+
+    // consider zoom level
+    ctx.scale(zoomLevel, zoomLevel);
+    let x = (canvas.width/zoomLevel - canvas.width)/2;
+    let y = (canvas.height/zoomLevel - canvas.height)/2;
 
     // draw frame on canvas using drawImage
-    ctx.drawImage(videoEl, 0, 0);
+    ctx.drawImage(videoEl, x, y);
+
+    // normally
+    // ctx.drawImage(videoEl, 0, 0);
 
     // draw filter on top of image
     if(selectedFilterColor) {
@@ -121,6 +131,23 @@ filterContainer.addEventListener("click", function (e) {
             uiFilter.classList.remove("ui-filter-active");
             uiFilter.style.backgroundColor = "";
             selectedFilterColor = "";
+        }
+    }
+})
+
+// zoom in/out UI feature
+zoomContainer.addEventListener("click", function (e) {
+    if(e.target.classList.contains("zoom-in")) {
+        if(zoomLevel < 2) {
+            zoomLevel += 0.35;
+
+            // scale(-x,y) : to flip UI image horizontally during zoom as well 
+            videoEl.style.transform = `scale(${-zoomLevel}, ${zoomLevel})`;
+        }
+    } else if(e.target.classList.contains("zoom-out")) {
+        if(zoomLevel > 1) {
+            zoomLevel -= 0.35;
+            videoEl.style.transform = `scale(${-zoomLevel}, ${zoomLevel})`;
         }
     }
 })

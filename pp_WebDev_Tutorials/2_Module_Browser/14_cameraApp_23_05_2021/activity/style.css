@@ -11,6 +11,9 @@ body {
     height: 100vh;
     background-color: black;
     z-index: 80;
+
+    /* to hide overflow during zoom in */
+    overflow: hidden;
 }
 
 video {
