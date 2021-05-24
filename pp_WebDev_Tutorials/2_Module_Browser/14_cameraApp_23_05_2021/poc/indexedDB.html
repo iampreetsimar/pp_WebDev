@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexed DB</title>
+</head>
+<body>
+    <input type="text" id="txnDB">
+    <input type="number" id="version">
+
+    <button id="createDB">Create DB</button>
+    <button id="addNote">Add Note</button>
+    <button id="viewData">View Data</button>
+    <script>
+        let db;
+        let count = 1;
+        let createDB = document.querySelector("#createDB");
+        let addNote = document.querySelector("#addNote");
+        let viewData = document.querySelector("#viewData");
+
+        createDB.addEventListener("click", function () {
+            // take care of creating DB
+
+            let dbn = document.querySelector("#txnDB").value;
+            let version = document.querySelector("#version").value;
+
+            let request = indexedDB.open(dbn, version);
+
+            // once db is created
+            request.addEventListener("success", function () {
+                db = request.result;
+            })
+
+            // error while creating db
+            request.addEventListener("error", function () {
+                console.log(request.error);
+            })
+
+            // incase db does not exist or version upgrade is needed
+            request.addEventListener("upgradeneeded", function (e) {
+                db = request.result;
+                if(db)
+                    db.createObjectStore("notes", { keyPath: "noteId" });
+            })
+        })
+
+        addNote.addEventListener("click", function () {
+            if(db) {
+                let note = {
+                    noteId: `#nt${count}`,
+                    noteTxt: `I am the #nt${count++}th note added`
+                };
+
+                // to initiate add in db 
+                // transaction(store, modeOfTransaction)
+                let txn = db.transaction("notes", "readwrite");
+                
+                // get notes store
+                let notesStore = txn.objectStore("notes");
+
+                // add note
+                notesStore.add(note);
+            }
+        })
+        
+        viewData.addEventListener("click", function () {
+            if(db) {
+                let txn = db.transaction("notes", "readonly");
+                let notesStore = txn.objectStore("notes");
+
+                // async
+                let notesData = notesStore.openCursor();
+                notesData.addEventListener("success", function (e) {
+                    let cursor = notesData.result;
+                    if(cursor) {
+                        // row-wise view data
+                        console.log(cursor.value);
+                        cursor.continue();
+                    }
+                })
+            } else {
+                alert("DB is loading...");
+            }
+        })
+    </script>
+</body>
+</html>
