@@ -26,10 +26,15 @@ navigator.mediaDevices.getUserMedia(constraints)
     mediaRecorder.addEventListener("stop", function () {
         let blob = new Blob(buffer, { type: "video/mp4" });
         const url = window.URL.createObjectURL(blob);
-        let a = document.createElement("a");
-        a.href = url;
-        a.download = "file.mp4";
-        a.click();
+
+        // commenting to use indexedDB
+        // let a = document.createElement("a");
+        // a.href = url;
+        // a.download = "file.mp4";
+        // a.click();
+
+        // USE OF INDEXED DB TO STORE VIDEO
+        addMediaToDB(url, "video");
 
         buffer = [];
     });
@@ -106,11 +111,15 @@ captureBtn.addEventListener("click", function () {
     let url = canvas.toDataURL();
 
     // download process
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = "image-capture.png";
-    a.click();
-    a.remove();
+    // let a = document.createElement("a");
+    // a.href = url;
+    // a.download = "image-capture.png";
+    // a.click();
+    // a.remove();
+
+    // USE OF INDEXED DB TO STORE IMAGES
+    addMediaToDB(url, "image");
+
     canvas.remove();
 
     // animation should not be removed abrubtly
