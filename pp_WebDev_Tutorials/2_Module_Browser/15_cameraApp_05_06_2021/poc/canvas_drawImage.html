@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0.2rem;
+        }
+
+        img {
+            height: 10vh;
+            width: 10vw;
+        }
+
+        #canvas-board {
+            border: 0.1rem solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>Canvas Example</h2>
+        <img src="./daredevil.png">
+    </div>
+    
+    <canvas id="canvas-board"></canvas>
+
+    <script>
+        let canvasBoard = document.querySelector("#canvas-board");
+        let image = document.querySelector("img");
+        canvasBoard.height = window.innerHeight - (window.innerHeight/8);
+        canvasBoard.width = window.innerWidth;
+
+        let tool = canvasBoard.getContext("2d");
+
+        // draw Image
+        image.addEventListener("load", function () {
+            tool.drawImage(image, 0, 0);
+        })
+        
+    </script>
+</body>
+</html>
