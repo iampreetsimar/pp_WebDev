@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <!-- for react codebase/algorithms -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+
+    <!-- different for diff devices, for webpage: dom - to show the changes on UI from codebase -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- JSX transpiler/compiler : to convert to JS code for browser -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Counter - Class Components</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // uses inheritance
+        // React.Component gives these properties like state to class Counter
+        // class Counter extends React.Component {
+        //     render() {
+        //         return (
+        //             // only JSX code
+        //             <h1>hello</h1>
+        //         )
+        //     }
+        // }
+
+        class Counter extends React.Component {
+            constructor() {
+                // calling super provides this - natively by react
+                // this wild hold properties of a component
+                // child classes don't have this, in order to solve this issue we call super to get this object from 
+                // parent class
+                super();
+                // this is accessible in the whole class
+                // meaning state also is accessible
+                this.state = {
+                    count: 0
+                }
+            }
+
+            // we can bind function but arrow function is more readable and easy
+            // arrow function increment/decrement
+            increment = () => {
+                // this.state.count = this.state.count + 1;
+                // we never directly change the state, we use setState provided by react
+                // render also gets called if we use this
+                // setState - changes the state + calls render to update UI
+                this.setState({count: this.state.count + 1});
+            }
+
+            decrement = () => {
+                this.setState({count: this.state.count - 1});
+            }
+
+            render() {
+                // on re-rendering, this get called again
+                console.log("render");
+                return (
+                    <React.Fragment>
+                        <button onClick={this.increment}>+</button>
+                        <h1>{this.state.count}</h1> 
+                        <button onClick={this.decrement}>-</button>
+                    </React.Fragment>
+                )
+            }
+        }
+
+        ReactDOM.render(<Counter/>, document.getElementById("root"));
+    </script>
+</body>
+</html>
