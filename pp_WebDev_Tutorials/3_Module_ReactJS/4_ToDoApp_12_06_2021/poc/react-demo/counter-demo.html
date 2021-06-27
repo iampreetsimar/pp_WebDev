@@ -31,12 +31,12 @@
         // }
 
         class Counter extends React.Component {
-            constructor() {
+            constructor(props) {
                 // calling super provides this - natively by react
                 // this will hold properties of a component
                 // child classes don't have this, in order to solve this issue we call super to get this object from 
                 // parent class
-                super();
+                super(props);
                 // this is accessible in the whole class
                 // meaning state also is accessible
                 this.state = {
