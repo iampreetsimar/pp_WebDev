@@ -71,7 +71,19 @@
             }
         }
 
-        ReactDOM.render(<Counter/>, document.getElementById("root"));
+        // to add multiple independent counters
+        function Counters(props) {
+            return (
+                <React.Fragment>
+                    <Counter/>
+                    <br/>
+                    <br/>
+                    <Counter/>
+                </React.Fragment>
+            )
+        }
+
+        ReactDOM.render(<Counters/>, document.getElementById("root"));
     </script>
 </body>
 </html>
