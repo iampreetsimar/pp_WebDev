@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <!-- for react codebase/algorithms -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+
+    <!-- different for diff devices, for webpage: dom - to show the changes on UI from codebase -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- JSX transpiler/compiler : to convert to JS code for browser -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React Demo - Adding react to webpage</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // FUNCTIONAL COMPONENT - start with uppercase only
+        // props - is an empty(if nothing is passed from parent) object passed from parent to child to get content
+        // function Hello(props) {
+        //     // can write JS outside return
+        //     // console.log(props)
+        //     return (
+        //         // contains only JSX(hybrid of HTML + JS) code
+        //         // to use props, use {}
+        //         <h1>hello {props.person}</h1>
+        //     )
+        // }
+
+        // we can use destructuring here to directly get the key person
+        function Hello({person: name = "Anonymous", age = "0"}) {
+            // can write JS outside return
+            // console.log(props)
+            return (
+                // contains only JSX(hybrid of HTML + JS) code
+                // to use props, use {}
+                // will add a default value of Anonymous if nothing is passed from parent
+                <h1>hello {name}, age {age}</h1>
+            )
+        }
+
+        // to show reusability
+        function Hellos() {
+            return (
+                // return only returns only thing - so need to wrap this in a single component
+                // we can use div to wrap but it will add a div in DOM as well
+                // React provides React.Fragment to wrap which is not added on DOM
+                <React.Fragment>
+                    <Hello person="simar" age="27"/>
+                    <Hello person="amit"/>
+                    <Hello/>
+                    <Hello/>
+                </React.Fragment>
+            )
+        }
+        
+        // native method to render on browser/DOM
+        // ReactDOM.render(<componentToBeRendered/>, renderedInsideElement)
+        ReactDOM.render(<Hellos/>, document.getElementById("root"));
+    </script>
+</body>
+</html>
