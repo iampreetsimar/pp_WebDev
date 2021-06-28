@@ -33,27 +33,48 @@ export default class Todo extends Component {
 
     render() {
         return (
-            <div>
-                <div className="input-container">
-                    <input onChange={this.handleChange} value={this.state.currentTask} type="text"></input>
-                    <button onClick={this.addTask}>Add task</button>
-                </div>
-                <div className="task-list">
-                    <ul>
-                        {this.state.tasklist.map(task => (
-                            <li key={task.id}>
-                                <h2>{task.text}</h2>
+            <>
+                <InputComponent value={this.state.currentTask} handleChange={this.handleChange} addTask={this.addTask} />
+                <TasklistComponent tasklist={this.state.tasklist} deleteTask={this.deleteTask} />
+            </>
+        )
+    }
+}
 
-                                {/* using bind method */}
-                                {/* <button onClick={function () {this.deleteTask(task.id)}.bind(this)}>Delete</button> */}
+// cannot export two defaults
+class InputComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-                                {/* using arrow function */}
-                                <button onClick={() => this.deleteTask(task.id)}>Delete</button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+    render() {
+        return (
+            <div className="input-container">
+                <input value={this.props.value} onChange={this.props.handleChange} type="text"></input>
+                <button onClick={this.props.addTask}>Add task</button>
             </div>
         )
     }
 }
+
+class TasklistComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="task-list">
+                <ul>
+                    {this.props.tasklist.map(task => (
+                        <li key={task.id}>
+                            <h2>{task.text}</h2>
+                            <button onClick={() => this.props.deleteTask(task.id)}>Delete</button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )
+    }
+}
+
