@@ -1,30 +1,24 @@
+/* eslint-disable no-useless-constructor */
 import React, { Component } from 'react'
 
 export default class Todo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tasklist: [{id:1, text: 'Task 1'}, {id:2, text: 'Task 2'}, {id:3, text: 'Task 3'}],
-            currentTask: ''
+            tasklist: [{id:1, text: 'Task 1'}, {id:2, text: 'Task 2'}, {id:3, text: 'Task 3'}]
         }
     }
 
-    handleChange = (e) => {
-        let taskText = e.target.value;
-        this.setState({currentTask: taskText});
-    }
-
-    addTask = () => {
+    addTask = (taskVal) => {
         // use destructuring to create a new copy of tasklist
         // so that changes are reflected in DOM
-        let newlist = [...this.state.tasklist, {id: this.state.tasklist.length + 1, text: this.state.currentTask}];
-        this.setState({tasklist: newlist, currentTask: ''});
+        let newlist = [...this.state.tasklist, {id: this.state.tasklist.length + 1, text: taskVal}];
+        this.setState({tasklist: newlist});
     }
 
     deleteTask = (id) => {
         // id is passed from arrow function
         // this is equal to the outer this
-
         let newlist = this.state.tasklist.filter(task => {
             return task.id !== id;
         });
@@ -32,9 +26,10 @@ export default class Todo extends Component {
     }
 
     render() {
+        console.log("Todo render");
         return (
             <>
-                <InputComponent value={this.state.currentTask} handleChange={this.handleChange} addTask={this.addTask} />
+                <InputComponent addTask={this.addTask} />
                 <TasklistComponent tasklist={this.state.tasklist} deleteTask={this.deleteTask} />
             </>
         )
@@ -45,13 +40,24 @@ export default class Todo extends Component {
 class InputComponent extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentTask: ''
+        }
+    }
+
+    handleChange = (e) => {
+        this.setState({currentTask: e.target.value});
     }
 
     render() {
+        console.log("Input render");
         return (
             <div className="input-container">
-                <input value={this.props.value} onChange={this.props.handleChange} type="text"></input>
-                <button onClick={this.props.addTask}>Add task</button>
+                <input value={this.state.currentTask} onChange={this.handleChange} type="text"></input>
+                <button onClick={() => {
+                    this.props.addTask(this.state.currentTask);
+                    this.setState({currentTask: ''})
+                }}>Add task</button>
             </div>
         )
     }
@@ -63,6 +69,7 @@ class TasklistComponent extends Component {
     }
 
     render() {
+        console.log("Tasklist render");
         return (
             <div className="task-list">
                 <ul>
