@@ -80,8 +80,6 @@ export default class MoviesComponent extends Component {
                                         <i className="fas fa-sort"></i>
                                     </th>
                                     <th scope="col"></th>
-                                    
-                                    
                                 </tr>
                             </thead>
                             <tbody>
