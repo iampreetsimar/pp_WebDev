@@ -1,0 +1,21 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cadetblue;
+    margin-bottom: 5rem;
+    height: 10vh;
+}
+
+.nav-list {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+}
+
+.nav-list > * {
+    cursor: pointer;
+}
+

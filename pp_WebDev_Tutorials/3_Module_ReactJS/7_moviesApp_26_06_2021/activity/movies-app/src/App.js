@@ -1,7 +1,7 @@
 import MoviesComponent from "./Components/MoviesComponent";
 import HomeComponent from "./Components/HomeComponent";
 import AboutComponent from "./Components/AboutComponent";
-import NavComponent from "./Components/NavComponent";
+import NavComponent from "./NavComponent";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
