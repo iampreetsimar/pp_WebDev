@@ -1,10 +1,19 @@
 import MoviesComponent from "./Components/MoviesComponent";
+import HomeComponent from "./Components/HomeComponent";
+import AboutComponent from "./Components/AboutComponent";
+import NavComponent from "./Components/NavComponent";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <MoviesComponent/>
-    </>
+    <Router>
+      <NavComponent />
+      <Switch>
+        <Route path='/' exact component={HomeComponent} />
+        <Route path='/movies' component={MoviesComponent} />
+        <Route path='/about' component={AboutComponent} />
+      </Switch>
+    </Router>
   );
 }
 
