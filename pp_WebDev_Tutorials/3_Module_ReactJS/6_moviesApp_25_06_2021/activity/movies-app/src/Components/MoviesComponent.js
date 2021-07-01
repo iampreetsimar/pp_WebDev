@@ -7,7 +7,9 @@ export default class MoviesComponent extends Component {
         super(props);
         this.state = {
             movies: getMovies(),
-            currSearch: ''
+            currSearch: '',
+            currPage: 1,
+            limit: 4
 
             // removing it as making a state for a temporary function here is not necessary and efficient
             // filteredMovies: getMovies()
@@ -79,8 +81,12 @@ export default class MoviesComponent extends Component {
         this.setState({movies: sortedMovies});
     }
 
+    handlePagination = (page) => {
+        this.setState({currPage: page});
+    }
+
     render() {
-        let {movies, currSearch} = this.state;
+        let { movies, currSearch, currPage, limit } = this.state;
         let filteredMovies = [];
         
         if(currSearch !== '') {
@@ -91,6 +97,16 @@ export default class MoviesComponent extends Component {
         } else {
             filteredMovies = movies;
         }
+
+        let totalPages = Math.ceil(filteredMovies.length / limit);
+        let pageNumbers = [];   // for pagination
+        for(let i = 0; i < totalPages; i++) {
+            pageNumbers.push(i + 1);
+        }
+
+        let si = (currPage - 1) * limit;
+        let ei = si + limit;
+        filteredMovies = filteredMovies.slice(si, ei);
 
         return (
             <div className="container">
@@ -136,6 +152,22 @@ export default class MoviesComponent extends Component {
                                 }
                             </tbody>
                         </table>
+
+                        {/* PAGINATION */}
+                        <nav aria-label="...">
+                            <ul className="pagination">
+                                {
+                                    pageNumbers.map((page) => {
+                                        let classStyle = page === currPage ? "page-item active" : "page-item";
+                                        return (
+                                            <li key={page} className={classStyle} onClick={() => this.handlePagination(page)}>
+                                                <span className="page-link">{page}</span>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
