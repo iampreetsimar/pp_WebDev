@@ -14,8 +14,3 @@
     list-style: none;
     width: 40%;
 }
-
-.nav-list > * {
-    cursor: pointer;
-}
-
