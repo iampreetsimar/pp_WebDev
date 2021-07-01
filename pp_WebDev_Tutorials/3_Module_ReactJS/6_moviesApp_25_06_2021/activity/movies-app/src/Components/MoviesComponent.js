@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/scope */
 import React, { Component } from 'react';
-import { getMovies } from './MoviesService';
+// import { getMovies } from './MoviesService';
+import axios from 'axios';
 
 export default class MoviesComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            movies: getMovies(),
+            // we'll use ComponentDidMount to make a network request
+            movies: [],
             currSearch: '',
             currPage: 1,
             limit: 4
@@ -14,6 +16,15 @@ export default class MoviesComponent extends Component {
             // removing it as making a state for a temporary function here is not necessary and efficient
             // filteredMovies: getMovies()
         }
+    }
+
+    // since promise will be returned, we'll use async
+    async componentDidMount() {
+        let result = await axios.get("https://backend-react-movie.herokuapp.com/movies");
+        // console.log(result.data.movies);
+        this.setState({
+            movies: result.data.movies
+        })
     }
 
     handleChange = (e) => {
@@ -34,6 +45,11 @@ export default class MoviesComponent extends Component {
         // });
 
         // this.setState({filteredMovies: newFilteredMovies, currSearch: val});
+    }
+
+    handleLimit = (e) => {
+        let val = e.target.value;
+        this.setState({limit: val});
     }
 
     deleteMovie = (id) => {
@@ -108,6 +124,11 @@ export default class MoviesComponent extends Component {
         let ei = si + limit;
         filteredMovies = filteredMovies.slice(si, ei);
 
+        // fix for case - one movie on page and delete it
+        // if(filteredMovies.length === 0) {
+        //     this.setState({currPage: 1});
+        // }
+
         return (
             <div className="container">
                 <div className="row">
@@ -116,6 +137,8 @@ export default class MoviesComponent extends Component {
                     </div>
                     <div className="col-9">
                         <input type="text" placeholder="Enter movie name" onChange={this.handleChange} value={this.state.currSearch}></input>
+                        <label>Show results: </label>
+                        <input type="number" onChange={this.handleLimit} value={this.state.limit} min="1" max={this.state.movies.length}></input>
 
                         {/* Movies Table */}
                         <table className="table">
