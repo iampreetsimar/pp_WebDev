@@ -11,7 +11,14 @@ function App() {
       <Switch>
         <Route path='/' exact component={HomeComponent} />
         <Route path='/movies' component={MoviesComponent} />
-        <Route path='/about' component={AboutComponent} />
+
+        {/* won't work if props are passed */}
+        {/* <Route path='/about' component={AboutComponent} isAuth={true} /> */}
+        {/* to pass a prop from route */}
+        {/* props are router props being passed and we're adding isAuth to props list */}
+        <Route path='/about' render={(props) => (
+          <AboutComponent {...props} isAuth={true} />
+        )} />
       </Switch>
     </Router>
   );

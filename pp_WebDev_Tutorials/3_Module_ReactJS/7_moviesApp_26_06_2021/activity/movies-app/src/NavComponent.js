@@ -6,7 +6,7 @@ export default function NavComponent() {
     return (
         <>
             <nav className="nav-bar">
-                <h3>Logo</h3>
+                <h3><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Logo</Link></h3>
                 <ul className="nav-list h3">
                     <li><Link to="/" style={{ textDecoration: 'none', color: 'whitesmoke' }}>Home</Link></li>
                     <li><Link to="/about" style={{ textDecoration: 'none', color: 'whitesmoke' }}>About</Link></li>
