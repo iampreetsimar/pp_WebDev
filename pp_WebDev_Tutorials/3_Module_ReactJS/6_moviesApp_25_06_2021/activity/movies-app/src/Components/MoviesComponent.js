@@ -41,6 +41,44 @@ export default class MoviesComponent extends Component {
         this.setState({movies: newMovies});
     }
 
+    sortByRatings = (e) => {
+        let classname = e.target.className;
+        let sortedMovies = [];
+
+        if(classname === "fas fa-sort-up") {
+            // ascending order
+            sortedMovies = this.state.movies.sort(function (movieA, movieB) {
+                return movieA.dailyRentalRate - movieB.dailyRentalRate;
+            });
+        } else {
+            // descending order
+            sortedMovies = this.state.movies.sort(function (movieA, movieB) {
+                return movieB.dailyRentalRate - movieA.dailyRentalRate;
+            })
+        }
+
+        this.setState({movies: sortedMovies});
+    }
+
+    sortByStock = (e) => {
+        let classname = e.target.className;
+        let sortedMovies = [];
+
+        if(classname === "fas fa-sort-up") {
+            // ascending order
+            sortedMovies = this.state.movies.sort(function (movieA, movieB) {
+                return movieA.numberInStock - movieB.numberInStock;
+            });
+        } else {
+            // descending order
+            sortedMovies = this.state.movies.sort(function (movieA, movieB) {
+                return movieB.numberInStock - movieA.numberInStock;
+            })
+        }
+
+        this.setState({movies: sortedMovies});
+    }
+
     render() {
         let {movies, currSearch} = this.state;
         let filteredMovies = [];
@@ -71,13 +109,15 @@ export default class MoviesComponent extends Component {
                                     <th scope="col">Genre</th>
                                     <th scope="col">
                                         Stock
-                                        <i className="fas fa-sort"></i>
-                                        {/* <i className="fas fa-sort-up"></i>
-                                        <i className="fas fa-sort-down"></i> */}
+                                        {/* <i className="fas fa-sort"></i> */}
+                                        <i onClick={this.sortByStock} className="fas fa-sort-up"></i>
+                                        <i onClick={this.sortByStock} className="fas fa-sort-down"></i>
                                     </th>
                                     <th scope="col">
                                         Rate
-                                        <i className="fas fa-sort"></i>
+                                        {/* <i className="fas fa-sort"></i> */}
+                                        <i onClick={this.sortByRatings} className="fas fa-sort-up"></i>
+                                        <i onClick={this.sortByRatings} className="fas fa-sort-down"></i>
                                     </th>
                                     <th scope="col"></th>
                                 </tr>
