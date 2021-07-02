@@ -10,14 +10,14 @@ export default function Us() {
         // this won't work as address of object is same so state is changing but re-rendering does not happen
         // messageObject.message = val;
 
-        // using destructuring to create new object so that component re-render 
+        // using destructuring to create new object so that component re-renders 
         // setMessage({...messageObject, message: val});
 
-        // have to set all value in new object
+        // have to set all value in new object otherwise existing object will be replaced by new object all together 
         // let newObj = {message: val};
 
         // using spread operator for destructuring won't delete id from object, as entire object is being copied to newObj at new reference
-        // then we 're updating message key in new Obj
+        // then we 're updating message key in new object
         let newObj = {...messageObject, message: val};
         setMessage(newObj);
     }
