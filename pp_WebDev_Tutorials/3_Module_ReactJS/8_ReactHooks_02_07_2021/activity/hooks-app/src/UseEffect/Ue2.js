@@ -10,7 +10,7 @@ import React, { useState, useEffect } from 'react'
 export default function Ue2() {
     const [count, setCount] = useState(0);
 
-    // runs only first render
+    // runs only first render due to empty dependency array
     useEffect(() => {
         console.log("useEffect");
         document.title = `Clicked ${count} times`;
