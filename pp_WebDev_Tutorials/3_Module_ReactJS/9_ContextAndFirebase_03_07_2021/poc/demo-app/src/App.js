@@ -1,8 +1,10 @@
+// import Demo from "./ContextAPI/Demo";
+import Main from "./ContextAPI/Main";
 
 function App() {
   return (
     <>
-      <h1>hello</h1>
+      <Main />
     </>
   );
 }
