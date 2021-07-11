@@ -1,9 +1,12 @@
+import AuthProvider from "./Context/AuthProvider";
+import Signup from "./Components/Signup";
 
 function App() {
   return (
-    <>
-      <h1>Demo</h1>
-    </>
+    // signup is passed as props.children to AuthProvider
+    <AuthProvider>
+      <Signup />
+    </AuthProvider>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from "../firebase";
-const AuthContext = React.createContext();
+export const AuthContext = React.createContext();
 
 function AuthProvider({children}) {
     const [currentUser, setCurrentUser] = useState();
@@ -28,7 +28,8 @@ function AuthProvider({children}) {
     }
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanges(user => {
+        // onAuthStateChanged - Adds an observer for changes to the user's sign-in state.
+        const unsubscribe = auth.onAuthStateChanged(user => {
             // this updates the user state during mounting
             setCurrentUser(user);
 
